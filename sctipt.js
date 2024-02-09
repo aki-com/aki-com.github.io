@@ -7,3 +7,8 @@ function add() {
     ul.appendChild(li);
     document.getElementById('inputText').value = '';
 }
+function puna() {
+    var li = document.createElement('li');
+    li.textContent = 'ぷな';
+    li.appendChild(li);
+}
