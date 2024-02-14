@@ -1,6 +1,13 @@
 .center{
     text-align: center;
 }
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
 .point-none ul{
     list-style: none;
     padding: 0;
@@ -9,11 +16,14 @@
     width: 600px; /* テキストボックスの幅 */
     margin: 0 auto; /* 水平方向に中央揃え */
 }
+.text-box_M {
+    width: 450px; /* テキストボックスの幅 */
+    margin: 0 auto; /* 水平方向に中央揃え */
+}
 @media screen and (max-width: 600px) {
     .text-box {
         width: 100%; /* テキストボックスの幅 */
     }
-
     body {
         font-size: 14px; /* モバイルデバイス用の小さな文字サイズ */
     }
@@ -23,6 +33,12 @@
     padding: 10px; /* テキストボックスの内側の余白 */
     box-sizing: border-box; /* テキストボックスの幅にpaddingとborderを含める */
     margin-bottom: 10px; /* テキストボックスの下の余白 */
+}
+
+@media screen and (max-width: 450px) {
+    .text-box_M {
+        width: 100%; /* テキストボックスの幅 */
+    }
 }
 .stripe{
     padding: 0.5em 1em;
