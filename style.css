@@ -13,6 +13,10 @@
     .text-box {
         width: 100%; /* テキストボックスの幅 */
     }
+
+    body {
+        font-size: 14px; /* モバイルデバイス用の小さな文字サイズ */
+    }
 }
 .text-box [type="text"] {
     width: 100%; /* テキストボックスの幅 */
