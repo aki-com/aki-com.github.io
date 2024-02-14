@@ -9,6 +9,11 @@
     width: 600px; /* テキストボックスの幅 */
     margin: 0 auto; /* 水平方向に中央揃え */
 }
+@media screen and (max-width: 600px) {
+    .text-box {
+        width: 100%; /* テキストボックスの幅 */
+    }
+}
 .text-box [type="text"] {
     width: 100%; /* テキストボックスの幅 */
     padding: 10px; /* テキストボックスの内側の余白 */
