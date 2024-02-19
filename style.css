@@ -8,6 +8,11 @@
 .left {
     text-align: left;
 }
+.field{
+    width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
 /* リストのスタイルをなくす */
 .point-none ul{
     list-style: none;
@@ -15,13 +20,10 @@
 }
 
 .text-box {
-    width: 600px; /* テキストボックスの幅 */
+    width: 500px; /* テキストボックスの幅 */
     margin: 0 auto; /* 水平方向に中央揃え */
 }
-.text-box_L {
-    width: 800px; /* テキストボックスの幅 */
-    margin: 0 auto; /* 水平方向に中央揃え */
-}
+
 .text-box_M {
     width: 450px; /* テキストボックスの幅 */
     margin: 0 auto; /* 水平方向に中央揃え */
@@ -55,18 +57,18 @@
     }
 }
 /* boxの模様↓ */
-.box-stripe{
+.stripe-box{
     padding: 0.5em 1em;
     margin: 2em 0;
     background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
     background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
 }
-.box-stripe p{
+.stripe-box p{
     margin : 0;
     padding: 0;
 }
 
-.box-schedule{
+.schedule-box{
     padding: 0.5em 1em;
     margin: 2em 0;
     color: #00BCD4;
@@ -74,11 +76,11 @@
     border-top: solid 6px #1dc1d6;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
 }
-.box-schedule p{
+.schedule-box p{
     margin : 0;
     padding: 0;
 }
-.box-title {
+.title-box {
     padding: 0.5em 1em;
     margin-top: 10px;
     margin-bottom: 10px; 
@@ -89,17 +91,54 @@
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
 }
-.box-title p {
+.title-box p {
     margin: 0; 
     padding: 0;
 }
-.box-title h1 {
+.title-box h1 {
     margin: 0; 
     padding: 0;
     color: #ffffff;
 }
-.box-title h2 {
+.title-box h2 {
     margin: 0; 
     padding: 0;
     color: #cccccc;
+}
+.section-box {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: #6091d3;/*文字色*/
+    background: #FFF;
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+.section-box p {
+    margin: 0; 
+    padding: 0;
+}
+.heading-box {
+    position: relative;
+    margin: 2em 0;
+    padding: 50px 10px 7px;
+    border: solid 2px #FFC107;
+    background-color: #ffffff;
+}
+.heading-box .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -2px;
+    left: -2px;
+    padding: 0 9px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 25px;
+    background: #FFC107;
+    color: #ffffff;
+    font-weight: bold;
+}
+.heading-box p {
+    margin: 0; 
+    padding: 0;
 }
