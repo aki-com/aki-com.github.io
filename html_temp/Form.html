@@ -1,0 +1,39 @@
+<head>
+    <meta charset="utf-8">
+    <meta lang="ja">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1208490717630175"crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!--コメントフォーム-->
+    <div name="form">
+        <form action="https://send.pageclip.co/qmYOxqgUuzlkHOgmBK6kcMB75wFZ2B9Y/default" class="pageclip-form" method="post">
+            <!-- Replace these inputs with your own. Make sure they have a "name" attribute! -->
+            <div class="text-box_M left">
+                <div class="text-box_SS">
+                    <input type="text" name="name" class="center" placeholder="ニックネーム" />
+                </div>
+            </div>
+            <textarea name="message" class="text-box_M center" placeholder="コメントを入力" ></textarea>
+            <!-- This button will have a loading spinner. Keep the inner span for best results. -->
+            <div class="center">
+                <button type="submit" class="pageclip-form__submit">
+                <span>送信</span>
+                </button>
+            </div>
+        </form>
+    </div>
+    <!--コメントフォームここまで-->
+    <script>
+        window.onload=function(){
+            var url_Part = new URLSearchParams(window.location.search).get('page_name');
+        var form = document.querySelector('.pageclip-form');
+        form.action = "https://send.pageclip.co/qmYOxqgUuzlkHOgmBK6kcMB75wFZ2B9Y/" + url_Part;
+    }
+    </script>
+    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+    <script src="script.js"></script>
+</body>

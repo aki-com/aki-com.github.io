@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pageclip Data Viewer</title>
+</head>
+<body>
+
+<h1>Pageclip Data Viewer</h1>
+<div id="data-display"></div>
+
+<script>
+// PageclipのAPIキーを設定
+const API_KEY = 'api_PpSC5p8Hix6GGlqlVNTscqt8Il3Hp8TH';
+const API_URL = `https://api.pageclip.co/v1/${API_KEY}/default/data`;
+
+// PageclipのAPIを呼び出してデータを取得する関数
+async function fetchData() {
+  try {
+    const response = await fetch(API_URL);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return null;
+  }
+}
+
+// データを取得して表示する
+fetchData()
+  .then(data => {
+    if (data) {
+      const dataDisplay = document.getElementById('data-display');
+      dataDisplay.innerText = JSON.stringify(data, null, 2);
+    } else {
+      console.log('Failed to fetch data.');
+    }
+  });
+</script>
+
+</body>
+</html>
