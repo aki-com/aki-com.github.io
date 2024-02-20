@@ -4,14 +4,42 @@
 .right {
     text-align: right;
 }
+.right_F {
+    float: right;
+}
 
 .left {
     text-align: left;
 }
-.field{
+.left_F {
+    float: left;
+}
+.stick {
+    display: flex;
+    position: sticky;
+    top: 0;
+  }
+  
+.field {
     width: 600px;
     margin: 0 auto;
     background-color: #ffffff;
+}
+.field_Left {
+    width: 150px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    float: left;
+    display: flex;
+    position: sticky;
+}
+.field_Right {
+    width: 300px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    float: right;
+    display: flex;
+    position: sticky;
 }
 /* リストのスタイルをなくす */
 .point-none ul{
@@ -39,6 +67,12 @@
 @media screen and (max-width: 600px) {
     .text-box {
         width: 100%; /* テキストボックスの幅 */
+    }
+    .field {
+        width: 100%; /* テキストボックスの幅 */
+    }
+    .field_S {
+        width: 0%; /* テキストボックスの幅 */
     }
     body {
         font-size: 14px; /* モバイルデバイス用の小さな文字サイズ */
