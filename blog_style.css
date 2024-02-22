@@ -1,0 +1,124 @@
+    .center{
+        text-align: center;
+    }
+    .right {
+        text-align: right;
+    }
+    .left {
+        text-align: left;
+    }
+
+    .text-box {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+
+    @media (max-width: 900px) {
+        .field_sub {
+            display: none;
+        }
+        .text-box , .field_main {
+            width: calc(100% - 300px );
+        }
+    }
+    @media (max-width: 660px) {
+        .text-box {
+            width: 100%; /* テキストボックスの幅 */
+        }
+        .field_main {
+            width: 100%; /* テキストボックスの幅 */
+        }
+        .field_shere, .field_sub{
+            display: none;  /* テキストボックスの幅 */
+        }
+        body {
+            font-size: 14px; /* モバイルデバイス用の小さな文字サイズ */
+        }
+    }
+    .field_main {
+        width: 600px;
+        background-color: #ffffff;
+        margin: 0 auto;
+    }
+    .field_shere {
+        width: 80px;
+        margin: 0 auto;
+        margin-right: 20px;
+        top:0;
+        background-color: #ffffff;
+        float: left;
+        position: sticky;
+    }
+    .field_sub {
+        width:calc(100% - 720px);
+        
+        margin: 0 auto;
+        top:0;
+        background-color: #ffffff;
+        float: right;
+        position: sticky;
+    }
+
+    .title-box {
+        padding: 0.5em 1em;
+        margin-top: 10px;
+        margin-bottom: 10px; 
+        margin: 2em 0;
+        color: #FFF;
+        background: #1d10cd;
+        border-bottom: solid 6px #7dbeff;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+        border-radius: 9px;
+    }
+    .title-box p {
+        margin: 0; 
+        padding: 0;
+    }
+    .title-box h1 {
+        margin: 0; 
+        padding: 0;
+        color: #ffffff;
+    }
+    .title-box h2 {
+        margin: 0; 
+        padding: 0;
+        color: #cccccc;
+    }
+    .section-box {
+        padding: 0.5em 1em;
+        margin: 2em 0;
+        font-weight: bold;
+        color: #6091d3;/*文字色*/
+        background: #FFF;
+        border: solid 3px #6091d3;/*線*/
+        border-radius: 10px;/*角の丸み*/
+    }
+    .section-box p {
+        margin: 0; 
+        padding: 0;
+    }
+    .heading-box {
+        position: relative;
+        margin: 2em 0;
+        padding: 50px 10px 7px;
+        border: solid 2px #FFC107;
+        background-color: #ffffff;
+    }
+    .heading-box .box-title {
+        position: absolute;
+        display: inline-block;
+        top: -2px;
+        left: -2px;
+        padding: 0 9px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 25px;
+        background: #FFC107;
+        color: #ffffff;
+        font-weight: bold;
+    }
+    .heading-box p {
+        margin: 0; 
+        padding: 0;
+    }
