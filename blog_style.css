@@ -14,28 +14,7 @@
     }
 
 
-    @media (max-width: 900px) {
-        .field_sub {
-            display: none;
-        }
-        .text-box , .field_main {
-            width: calc(100% - 300px );
-        }
-    }
-    @media (max-width: 660px) {
-        .text-box {
-            width: 100%; /* テキストボックスの幅 */
-        }
-        .field_main {
-            width: 100%; /* テキストボックスの幅 */
-        }
-        .field_shere, .field_sub{
-            display: none;  /* テキストボックスの幅 */
-        }
-        body {
-            font-size: 14px; /* モバイルデバイス用の小さな文字サイズ */
-        }
-    }
+
     .field_main {
         width: 600px;
         background-color: #ffffff;
@@ -60,6 +39,31 @@
         position: sticky;
     }
 
+    @media (max-width: 1000px) {
+        .field_sub {
+            display: none;
+        }
+        .text-box{
+            width: calc( 100% - 20px );
+        }
+        .field_main {
+            width: calc(100% - 100px );
+        }
+    }
+    @media (max-width: 660px) {
+        .text-box {
+            width: calc( 100% -10px ); /* テキストボックスの幅 */
+        }
+        .field_main {
+            width: 100%; /* テキストボックスの幅 */
+        }
+        .field_shere, .field_sub{
+            display: none;  /* テキストボックスの幅 */
+        }
+        body {
+            font-size: 14px; /* モバイルデバイス用の小さな文字サイズ */
+        }
+    }
     .title-box {
         padding: 0.5em 1em;
         margin-top: 10px;
