@@ -1,0 +1,33 @@
+name: Create Page
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create_page:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Create page
+        run: |
+          # Read the contents of blog/○○○.html
+          blog_content=$(cat blog/○○○.html)
+
+          # Insert the blog content into html_temp/blogPage.html
+          sed -i 's|<!-- INSERT_BLOG_CONTENT -->|<body>'"$blog_content"'</body>|' html_temp/blogPage.html
+
+          # Create the page/○○○.html file
+          echo "<body>$blog_content</body>" > page/○○○.html
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "aki-com"
+          git config --global user.email "123D057@stu.nit.ac.jp"
+          git add .
+          git commit -m "Create page/○○○.html"
+          git push
