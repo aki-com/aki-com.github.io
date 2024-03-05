@@ -17,26 +17,29 @@
 
     .field_main {
         width: 600px;
+        left: 100px;
         background-color: #ffffff;
-        margin: 0 auto;
+        position: relative;
+
     }
     .field_shere {
         width: 80px;
+        height: 100%;
         margin: 0 auto;
         margin-right: 20px;
-        top:500px;
         background-color: #ffffff;
         float: left;
-        position: sticky;
+        position: fixed;
+
     }
     .field_sub {
         width:calc(100% - 720px);
-        
+        height: 100%;
         margin: 0 auto;
-        top:0;
+        right:0;
         background-color: #ffffff;
         float: right;
-        position: sticky;
+        position: fixed;
     }
 
     @media (max-width: 1000px) {
@@ -56,6 +59,7 @@
         }
         .field_main {
             width: 100%; /* テキストボックスの幅 */
+            left: 0;
         }
         .field_shere, .field_sub{
             display: none;  /* テキストボックスの幅 */
