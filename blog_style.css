@@ -9,14 +9,14 @@
     }
 
     .text-box {
-        width: 500px;
+        width: 700px;
         margin: 0 auto;
     }
 
 
 
     .field_main {
-        width: 600px;
+        width: 800px;
         left: 100px;
         background-color: #ffffff;
         position: relative;
@@ -33,7 +33,7 @@
 
     }
     .field_sub {
-        width:calc(100% - 720px);
+        width:calc(100% - 920px);
         height: 100%;
         margin: 0 auto;
         right:0;
@@ -42,7 +42,7 @@
         position: fixed;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1200px) {
         .field_sub {
             display: none;
         }
@@ -129,4 +129,12 @@
     .heading-box p {
         margin: 0; 
         padding: 0;
+    }
+    .blog-box {
+        padding: 0.5em ;
+        margin: 2em 0;
+        color: #232323;
+        background: #fff8e8;
+        border-left: solid 10px #ffc06e;
+        Text-align:left
     }
