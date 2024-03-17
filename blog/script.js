@@ -1,6 +1,5 @@
 
 var title = document.title;
-document.getElementById("title").innerText = title;
 
 // 現在のページのURLを取得
 var currentPageURL = window.location.href;
