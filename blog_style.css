@@ -30,7 +30,9 @@
         background-color: #ffffff;
         float: left;
         position: fixed;
-
+    }
+    .field_shere img {
+        width: 100%;
     }
     .field_sub {
         width:calc(100% - 920px);
