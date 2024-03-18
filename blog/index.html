@@ -9,42 +9,26 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" type="text/css" href="../blog_style.css">
         <style>
-            body {
+            body {  
 
                 background-color: #f0f0f0;
             }
         </style>
-        <script src="script.js" defer></script>
     </head>
     <body>
         <div style="display: flex;">
-            <div class="field_shere">
-                <div style="font-size: 30px; background-color: #addde3; ">
-                    <p>shere</p>
-                    <p class="center">↓</p>
-                </div>
-        
-                <p>
-                    <a id="twitter-share" rel="nofollow noopener" target="_blank">
-                        <img src="../img/X_Logo.jpg" alt="Twitterでシェア">
-                    </a>
-                </p>
-                <p>
-                    <a id="line-share" rel="nofollow noopener" target="_blank">
-                        <img src="../img/Line_Logo.png" alt="LINEでシェア">
-                    </a>
-                </p>
-                <p>
-                    <a id="facebook-share" rel="nofollow noopener" target="_blank">
-                        <img src="../img/facebook_Logo.jpg" alt="Facebookでシェア">
-                    </a>
-                </p>
-                <p>
-                    <a id="hatena-share" rel="nofollow noopener" target="_blank">
-                        <img src="../img/hatena_Logo.jpg" alt="はてなブックマークでシェア">
-                    </a>
-                </p>
-            </div>
+            <div id="shere"></div>
+            <script>
+                fetch("../html_temp/shere.html")
+                    .then(response => response.text())
+                    .then(html => {
+                        document.getElementById("sheret").innerHTML = html;
+                    })
+                    .catch(error => {
+                        console.error("Fetch error:", error);
+                    });
+            </script>
+            
             <div class="field_main">
                 <div class="center text-box ">
                     <div class="title-box">
@@ -54,7 +38,7 @@
                     <div class="section-box">
                         <div class="left">  
                             <h2></h2>        
-                                <a  class="blog-box" style="display: flex;" href="GithubPages">
+                                <a  class="blog-box" style="display: flex;" href="GithubPages.html">
                                 <img src="../img/GitHub-Logo.png" style="width: 100px;">
                                 <h2>Github Pagesを使ってブログを書いてみる①</h2>
                                 </a>

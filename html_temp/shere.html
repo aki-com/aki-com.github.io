@@ -1,0 +1,37 @@
+
+<link rel="stylesheet" type="text/css" href="../blog_style.css">
+<div class="field_shere">
+    <div style="font-size: 30px; background-color: #addde3; ">
+        <p>shere</p>
+        <p class="center">↓</p>
+    </div>
+
+    <p>
+        <a id="twitter-share" rel="nofollow noopener" target="_blank">
+            <img src="../img/X_Logo.jpg" alt="Twitterでシェア">
+        </a>
+    </p>
+    <p>
+        <a id="line-share" rel="nofollow noopener" target="_blank">
+            <img src="../img/Line_Logo.png" alt="LINEでシェア">
+        </a>
+    </p>
+    <p>
+        <a id="facebook-share" rel="nofollow noopener" target="_blank">
+            <img src="../img/facebook_Logo.jpg" alt="Facebookでシェア">
+        </a>
+    </p>
+    <p>
+        <a id="hatena-share" rel="nofollow noopener" target="_blank">
+            <img src="../img/hatena_Logo.jpg" alt="はてなブックマークでシェア">
+        </a>
+    </p>
+</div>
+<script >
+    var title = document.title;
+    var currentPageURL = window.location.href;
+    document.getElementById("twitter-share").href = "https://twitter.com/share?url=" + encodeURIComponent(currentPageURL) + "&text=" + encodeURIComponent(title) + "&hashtags=ぷなリスト,IT&via=rre_zwihander&related=rre_zwihander";
+    document.getElementById("line-share").href = "https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(currentPageURL);
+    document.getElementById("facebook-share").href = "http://www.facebook.com/share.php?u=" + encodeURIComponent(currentPageURL);
+    document.getElementById("hatena-share").href = "http://b.hatena.ne.jp/add?mode=confirm&url=" + encodeURIComponent(currentPageURL) + "&title=" + encodeURIComponent(title);
+</script>
