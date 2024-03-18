@@ -19,10 +19,10 @@
         <div style="display: flex;">
             <div id="shere"></div>
             <script>
-                fetch("../html_temp/shere.html")
+                fetch("/html_temp/shere.html")
                     .then(response => response.text())
                     .then(html => {
-                        document.getElementById("sheret").innerHTML = html;
+                        document.getElementById("shere").innerHTML = html;
                     })
                     .catch(error => {
                         console.error("Fetch error:", error);
