@@ -18,16 +18,7 @@
     <body>
         <div style="display: flex;">
             <div id="shere"></div>
-            <script>
-                fetch("/html_temp/shere.html")
-                    .then(response => response.text())
-                    .then(html => {
-                        document.getElementById("shere").innerHTML = html;
-                    })
-                    .catch(error => {
-                        console.error("Fetch error:", error);
-                    });
-            </script>
+            <script src="shere.js"></script>
             
             <div class="field_main">
                 <div class="center text-box ">
