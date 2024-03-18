@@ -1,7 +1,7 @@
 fetch("/html_temp/shere.html")
     .then(response => response.text())
     .then(html => {
-        document.getElementById("shere").innerHTML = html;
+        document.getElementById("field_shere").innerHTML = html;
 
         // fetchリクエストが完了した後にシェアボタンの設定を行う
         var title = document.title;
