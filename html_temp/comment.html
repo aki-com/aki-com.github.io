@@ -1,9 +1,4 @@
-<head>
-    <meta charset="utf-8">
-    <meta lang="ja">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1208490717630175"crossorigin="anonymous"></script>
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+
     <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
     <link rel="stylesheet" href="../style.css">
     <style>
@@ -19,7 +14,7 @@
 <body>
     <!--コメントフォーム-->
     <div name="form">
-        <form action="https://send.pageclip.co/qmYOxqgUuzlkHOgmBK6kcMB75wFZ2B9Y/default" class="pageclip-form" method="post">
+        <form id="comment_API" class="pageclip-form" method="post">
             <div class="text-box">
                 <!-- Replace these inputs with your own. Make sure they have a "name" attribute! -->
                 <input type="text" name="name" placeholder="ニックネーム" />
@@ -27,7 +22,7 @@
                 <textarea name="message" style="height: 100px;" class="text-box" placeholder="コメントを入力"></textarea>
 
                 <!-- This button will have a loading spinner. Keep the inner span for best results. -->
-                <div class="center">
+                <div style="text-align: center;">
                 <button type="submit" class="pageclip-form__submit">
                 <span>送信</span>
                 </div>
@@ -37,13 +32,6 @@
 
     </div>
     <!--コメントフォームここまで-->
-    <script>
-        window.onload=function(){
-            var url_Part = new URLSearchParams(window.location.search).get('page_name');
-        var form = document.querySelector('.pageclip-form');
-        form.action = "https://send.pageclip.co/qmYOxqgUuzlkHOgmBK6kcMB75wFZ2B9Y/" + url_Part;
-    }
-    </script>
+
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
-    <script src="script.js"></script>
 </body>
