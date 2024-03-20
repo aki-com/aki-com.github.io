@@ -1,40 +1,18 @@
-
-    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
-    <style>
-        ::placeholder {
-            text-align: center; 
-            font-size: 1.1em;
-        }
-        input[type="text"], textarea {
-            font-size: 1.5em;
-        }
-        .text-box {
-            width: 500px; 
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <!--コメントフォーム-->
-    <div name="form">
-        <form id="comment_API" class="pageclip-form" method="post">
-            <div class="text-box">
-                <!-- Replace these inputs with your own. Make sure they have a "name" attribute! -->
-                <input type="text" name="name" placeholder="ニックネーム" />
-
-                <textarea name="message" style="height: 100px;" class="text-box" placeholder="コメントを入力"></textarea>
-
-                <!-- This button will have a loading spinner. Keep the inner span for best results. -->
-                <div style="text-align: center;">
-                <button type="submit" class="pageclip-form__submit">
+<link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+<style>
+    ::placeholder {
+        text-align: center;
+    }
+</style>
+<div name="form">
+    <form id="comment_API" class="pageclip-form" method="post">
+        <div style="width: 500px; text-align: center;">
+            <input type="text" name="name" placeholder="ニックネーム" style="text-align: center; font-size: 1.1em;" />
+            <textarea name="message" style="height: 100px; width: 500px;font-size: 1.5em; " placeholder="コメントを入力"></textarea>
+            <button type="submit" class="pageclip-form__submit">
                 <span>送信</span>
-                </div>
-                </button>
-            </div>
-        </form>
-
-    </div>
-    <!--コメントフォームここまで-->
-
-    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
-</body>
+            </button>
+        </div>
+    </form>
+</div>
+<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
