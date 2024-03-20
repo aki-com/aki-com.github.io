@@ -21,3 +21,11 @@ Promise.all([
 .catch(error => {
     console.error("Fetch error:", error);
 });
+fetch("../html_temp/navi.html")
+    .then(response => response.text())
+    .then(html => {
+        document.getElementById("field_navi").innerHTML = html;
+    })
+    .catch(error => {
+        console.error("Fetch error:", error);
+    });

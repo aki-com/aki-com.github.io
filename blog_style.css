@@ -23,20 +23,8 @@
 
     }
 
-    .field_sub {
-        width:calc(100% - 920px);
-        height: 100%;
-        margin: 0 auto;
-        right:0;
-        background-color: #ffffff;
-        float: right;
-        position: fixed;
-    }
-
     @media (max-width: 1100px) {
-        .field_sub {
-            display: none;
-        }
+
         .text-box{
             width: calc( 100% - 20px );
         }
@@ -51,9 +39,6 @@
         .field_main {
             width: 100%; /* テキストボックスの幅 */
             left: 0;
-        }
-        .field_shere, .field_sub{
-            display: none;  /* テキストボックスの幅 */
         }
         body {
             font-size: 14px; /* モバイルデバイス用の小さな文字サイズ */

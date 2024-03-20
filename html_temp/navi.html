@@ -1,0 +1,38 @@
+<style>
+    .field_navi {
+        width:calc(100% - 920px);
+        height: 100%;
+        margin: 0 auto;
+        right:0;
+        background-color: #ffffff;
+        float: right;
+        position: fixed;
+    }
+    .field_navi a{
+            display: inline-block; /* インライン要素として表示 */
+            padding: 10px 20px; /* 上下左右の余白 */
+            margin: 30px;
+            font-size: 30px; /* フォントサイズ */
+            font-weight: bold; /* 太字 */
+            text-decoration: none; /* 下線なし */
+            color: #fff; /* テキストの色 */
+            background-color: #007bff; /* 背景色 */
+            border-radius: 5px; /* 角丸 */
+            cursor: pointer; /* マウスカーソルをポインターに変更 */
+            transition: background-color 0.3s ease; /* ホバー時の遷移効果 */
+            }
+
+            /* ホバー時のスタイル */
+        .field_navi a:hover {
+        background-color: #0056b3; /* ホバー時の背景色 */
+        }
+    @media (max-width: 1100px) {
+        .field_navi {
+                display: none;
+            }
+        }
+</style>
+<div class="field_navi">
+    <a href="../index.html" class="link-box">トップページ</a>
+    <a href="../質問フォーム.html" class="link-box">お問い合わせ</a>
+</div>
