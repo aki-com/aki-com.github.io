@@ -1,8 +1,17 @@
+// head.html, shere.html, comment.html, navi.htmlの取得と挿入
 Promise.all([
+    fetch("../html_temp/head.html").then(response => response.text()),
     fetch("/html_temp/shere.html").then(response => response.text()),
-    fetch("../html_temp/comment.html").then(response => response.text())
+    fetch("../html_temp/comment.html").then(response => response.text()),
+    fetch("../html_temp/navi.html").then(response => response.text())
 ])
-.then(([shereHtml, commentHtml]) => {
+.then(([headHtml, shereHtml, commentHtml, naviHtml]) => {
+    var parser = new DOMParser();
+    var head = parser.parseFromString(headHtml, "text/html").querySelector("head");
+    head.childNodes.forEach(node => {
+        document.head.appendChild(node.cloneNode(true));
+    });
+
     document.getElementById("field_shere").innerHTML = shereHtml;
 
     // シェアボタンの設定
@@ -17,15 +26,9 @@ Promise.all([
     // コメントフォームの設定
     var url_Part = new URLSearchParams(window.location.search).get('page_name');
     document.getElementById("comment_API").action = "https://send.pageclip.co/qmYOxqgUuzlkHOgmBK6kcMB75wFZ2B9Y/" + url_Part;
+
+    document.getElementById("field_navi").innerHTML = naviHtml;
 })
 .catch(error => {
     console.error("Fetch error:", error);
 });
-fetch("../html_temp/navi.html")
-    .then(response => response.text())
-    .then(html => {
-        document.getElementById("field_navi").innerHTML = html;
-    })
-    .catch(error => {
-        console.error("Fetch error:", error);
-    });
