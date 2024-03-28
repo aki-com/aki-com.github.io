@@ -26,7 +26,7 @@ Promise.all([
 
     document.getElementById("field_comment").innerHTML = commentHtml;
     // コメントフォームの設定
-    var url_Part = new URLSearchParams(window.location.search).get('page_name');
+    var url_Part = window.location.pathname.split('/').pop();
     document.getElementById("comment_API").action = "https://send.pageclip.co/qmYOxqgUuzlkHOgmBK6kcMB75wFZ2B9Y/" + url_Part;
 
 
