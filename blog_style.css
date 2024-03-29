@@ -20,7 +20,7 @@
         left: 100px;
         background-color: #ffffff;
         position: relative;
-
+        text-align: center;
     }
 
     @media (max-width: 1100px) {
