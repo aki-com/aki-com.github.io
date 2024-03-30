@@ -143,6 +143,6 @@
         border-left:solid 6px #4472C4; /*左線*/
         background:transparent; /*背景職を透明に指定*/
        }
-    #comment_field{
+    #field_comment{
         max-width: 500px;
     }
