@@ -1,5 +1,5 @@
     .center{
-        text-align: center;
+    
     }
     .right {
         text-align: right;
@@ -143,3 +143,6 @@
         border-left:solid 6px #4472C4; /*左線*/
         background:transparent; /*背景職を透明に指定*/
        }
+    #comment_field{
+        max-width: 500px;
+    }
