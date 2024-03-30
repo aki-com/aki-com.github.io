@@ -115,3 +115,28 @@
         border-left: solid 10px #ffc06e;
         Text-align:left
     }
+    .box27 {
+        position: relative;
+        margin: 2em 0;
+        padding: 0.5em 1em;
+        border: solid 3px #62c1ce;
+    }
+    .box27 .box-title {
+        position: absolute;
+        display: inline-block;
+        top: -27px;
+        left: -3px;
+        padding: 0 9px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 17px;
+        background: #62c1ce;
+        color: #ffffff;
+        font-weight: bold;
+        border-radius: 5px 5px 0 0;
+    }
+    h2{
+        padding:0.25em 0.5em; /*上下 左右の余白*/
+        border-left:solid 6px #4472C4; /*左線*/
+        background:transparent; /*背景職を透明に指定*/
+       }
