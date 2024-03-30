@@ -115,31 +115,12 @@
         border-left: solid 10px #ffc06e;
         Text-align:left
     }
-    .cross-box {
-        position: relative;
-        margin: 2em 0;
-        padding: 0.5em 1em;
-        border: solid 3px #62c1ce;
-    }
-    .cross-box .box-title {
-        position: absolute;
-        display: inline-block;
-        top: -27px;
-        left: -3px;
-        padding: 0 9px;
-        height: 25px;
-        line-height: 25px;
-        font-size: 17px;
-        background: #62c1ce;
-        color: #ffffff;
-        font-weight: bold;
-        border-radius: 5px 5px 0 0;
-    }
+   
     .cross-box{
         margin:2em 0;
         position: relative;
         padding: 0.5em 1.5em;
-        border-top: solid 2px black;
+        border-top: solid 2px black;    
         border-bottom: solid 2px black;
     }
     .cross-box:before, .cross-box:after{
