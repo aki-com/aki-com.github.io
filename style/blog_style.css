@@ -18,6 +18,7 @@
     .field_main {
         width: 800px;
         left: 100px;
+        margin: 0 auto;
         background-color: #ffffff;
         position: relative;
         text-align: center;
@@ -39,6 +40,7 @@
         .field_main {
             width: 100%; /* テキストボックスの幅 */
             left: 0;
+            text-align: center;
         }
         body {
             font-size: 14px; /* モバイルデバイス用の小さな文字サイズ */
