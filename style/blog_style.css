@@ -12,7 +12,9 @@
         width: 700px;
         margin: 0 auto;
     }
-
+    .body {
+        text-align: center;
+    }
 
 
     .field_main {
