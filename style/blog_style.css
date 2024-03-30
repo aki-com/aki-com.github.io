@@ -139,6 +139,7 @@
         padding: 0;
     }
     .cross-box h2{
+        text-align: left;
         padding:0.25em 0.5em; /*上下 左右の余白*/
         border-left:solid 6px #4472C4; /*左線*/
         background:transparent; /*背景職を透明に指定*/
