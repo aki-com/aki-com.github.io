@@ -89,3 +89,7 @@
     border-left: solid 10px #ffc06e;
     Text-align:left
 }
+#comment_field {
+    width: 500px;
+    text-align: center;
+}
