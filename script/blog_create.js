@@ -28,7 +28,7 @@ Promise.all([
     // コメントフォームの設定
     var url_Part = window.location.pathname.split('/').pop();
     document.getElementById("comment_API").action = "https://send.pageclip.co/qmYOxqgUuzlkHOgmBK6kcMB75wFZ2B9Y/" + url_Part;
-
+    document.body.appendChild(parser.parseFromString('<script src="https://cdn.pageclip.co/v1/pageclip.js" charset="utf-8"></script>', "text/html").querySelector("script"));
 
 })
 .catch(error => {
