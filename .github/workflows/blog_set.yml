@@ -1,33 +1,42 @@
-name: Overwrite page_create branch with main
+name: Apply JS to Blog HTML and Update page_Create Branch
 
 on:
   push:
     branches:
-      - main
+      - main  # mainブランチが変更されたとき
 
 jobs:
-  overwrite-page-create:
+  build:
     runs-on: ubuntu-latest
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Display current branch
-      run: git branch
-
-    - name: Switch to page_create branch
-      run: git checkout page_Create
-
-    - name: Merge main into page_create
-      run: |
-        git merge main || echo "Merge conflict or nothing to merge"
-        git status
-
-    - name: Display git log
-      run: git log -n 10 --oneline
-
-    - name: Push changes to page_create branch
-      uses: ad-m/github-push-action@master
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: page_Create
+        node-version: '14'  # 使用するNode.jsのバージョン
+
+    - name: Install dependencies
+      run: npm install node-fetch jsdom
+
+    - name: Apply script to blog HTML
+      run: |
+        mkdir -p modified_html
+        for file in blog/*.html; do
+          node script/blog_create.js "$file" > "modified_html/$(basename "$file")"
+        done
+
+    - name: Configure Git
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+
+    - name: Commit and push changes to page_Create branch
+      run: |
+        git fetch
+        git checkout page_Create
+        git add modified_html
+        git commit -m "Apply JS to blog HTML"
+        git push origin page_Create
