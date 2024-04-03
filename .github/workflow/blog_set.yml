@@ -15,7 +15,7 @@ jobs:
     - name: Switch to page_create branch
       run: git checkout page_Create
 
-    - name: Merge main into aaaa
+    - name: Merge main into page_create
       run: git merge main
 
     - name: Push changes to page_create branch
