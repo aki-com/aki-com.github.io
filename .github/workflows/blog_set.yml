@@ -25,7 +25,7 @@ jobs:
       run: |
         mkdir -p modified_html
         for file in blog/*.html; do
-          node script/page_action.js "$file" > "modified_html/$(basename "$file")"
+          node script/page_action.cjs "$file" > "modified_html/$(basename "$file")"
         done
 
     - name: Configure Git
