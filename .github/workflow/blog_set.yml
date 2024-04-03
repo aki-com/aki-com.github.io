@@ -1,27 +1,25 @@
-name: Blog_Create
+name: Overwrite page_create branch with main
+
 on:
   push:
     branches:
       - main
+
 jobs:
-blog_create:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout repository
+  overwrite-aaaa:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
       uses: actions/checkout@v2
-    
-    - name: Run blog_create.js
-      run: |
-        cd blog
-        for file in *.html; do
-          node script/blog_create.js "$file"
-        done
-    
-    - name: Commit and push changes
-      run: |
-        git config --global user.name "aki-com"
-        git config --global user.email "123D057@stu.nit.ac.jp"
-        git checkout -b page_Create
-        git add .
-        git commit -m "Update blog files"
-        git push origin page_Create
+
+    - name: Switch to page_create branch
+      run: git checkout aaaa
+
+    - name: Merge main into aaaa
+      run: git merge main
+
+    - name: Push changes to page_create branch
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: page_create
