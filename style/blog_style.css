@@ -151,7 +151,7 @@
     }
     #field_comment textarea{
         max-width: 500px;
-        width: 100%;
+        width: calc(100% - 20px);
         height: 100px;
         font-size: 1.5em;
     }
