@@ -30,8 +30,8 @@
 
       - name: Configure Git
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "aki3.141592654@gmail.com"
+          git config --local user.name "aki-com"
 
       - name: Commit and push changes to page_Create branch
         run: |
