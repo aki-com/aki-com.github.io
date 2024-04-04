@@ -9,7 +9,6 @@
     }
 
     .text-box {
-        max-width: 690px;
         width: calc( 100% - 20px );
         margin: 0 auto;
     }
