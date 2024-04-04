@@ -1,5 +1,14 @@
-const fetch = require('node-fetch');
-const { JSDOM } = require('jsdom');
+let fetch;
+let JSDOM;
+
+import('node-fetch').then(module => {
+    fetch = module.default;
+});
+
+import('jsdom').then(module => {
+    JSDOM = module.JSDOM;
+});
+
 Promise.all([
     fetch("../html_temp/head.html").then(response => response.text()),
     fetch("/html_temp/shere.html").then(response => response.text()),
