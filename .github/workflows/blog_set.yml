@@ -39,4 +39,4 @@
           git checkout page_Create
           git add modified_html
           git commit -m "Apply JS to blog HTML"
-          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/aki-com/aki-com.github.io.git page_Create
+          git push https://${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/aki-com/aki-com.github.io.git page_Create
