@@ -37,6 +37,6 @@
         run: |
           git fetch
           git checkout page_Create
-          git add modified_html
+          git add -f modified_html
           git commit -m "Apply JS to blog HTML"
           git push https://${{secrets.PERSONAL_ACCESS_TOKEN2}}@github.com/aki-com/aki-com.github.io.git HEAD:page_Create
