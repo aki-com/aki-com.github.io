@@ -16,7 +16,7 @@
 
 
     .field_main {
-        width: calc(100% - 500px );
+        width: calc(100% - 480px );
         left: 100px;
         background-color: #ffffff;
         position: relative;
