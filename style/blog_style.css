@@ -16,8 +16,7 @@
 
 
     .field_main {
-        max-width: 800px;
-        width: 100%;
+        width: calc(100% - 500px );
         left: 100px;
         background-color: #ffffff;
         position: relative;
