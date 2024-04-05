@@ -76,6 +76,7 @@
         background: #FFF;
         border: solid 3px #6091d3;/*線*/
         border-radius: 10px;/*角の丸み*/
+        text-align: left;
     }
     .section-box p {
         margin: 0; 
@@ -144,6 +145,10 @@
         border-left:solid 6px #4472C4; /*左線*/
         background:transparent; /*背景職を透明に指定*/
        }
+    .cross-box img{
+        width: 100%;
+        max-width: 500px;
+    }
     #field_comment{
         max-width: 500px;
         display: block;
