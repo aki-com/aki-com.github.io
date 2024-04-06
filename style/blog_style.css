@@ -149,6 +149,9 @@
         width: 100%;
         max-width: 500px;
     }
+    .cross-box li{
+            line-height: 2.5;
+    }
     #field_comment{
         max-width: 500px;
         display: block;
