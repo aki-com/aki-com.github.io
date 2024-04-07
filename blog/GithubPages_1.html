@@ -9,6 +9,7 @@
             }
         </style>
         <link rel="stylesheet" type="text/css" href="../style/blog_style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css">
     </head>
     <body>
         <div style="display: flex;">
@@ -90,10 +91,6 @@
                         <p>これでネット側の設定は整いました！</p>
                     </div>
                 </div>
-
-
-
-
                 <div id="sec3" class="text-box">
                     <div class="cross-box">
                         <h2>2. PCセットアップ</h2>
@@ -149,12 +146,43 @@
 
                 </div>
                 <div id="sec4" class="center text-box">
+                    <div class="cross-box">
+                        <h2>3. サイト公開</h2>
+                        <p>最後にサイトを公開します！</p>
+                        <ol>
+                            <li>VScodeを開いて「ファイル」→「フォルダを開く」→「Local path」を選択</li>
+                            <li>「index.html」というファイルを作成し、以下のコードを入力</li>
+<pre>
+    <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ja"&gt;
+            &lt;head&gt;
+                &lt;title&gt;最初の一歩！！！&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;h1&gt;自作サイトだよー？見えてるー？&lt;/h1&gt;
+                &lt;p&gt;後は自由に書いてね♡&lt;/p&gt;
+            &lt;/body&gt;
+        &lt;/html&gt;
+    </code>
+</pre>
+                            <li>VScodeで「ファイル」→「保存」をクリック</li>
+                           
+                            <li>ブラウザで「https://ユーザー名.github.io」にアクセス</li>
+                        </ol>
+                        <p>これでサイトが公開されました！</p>
+                    </div>
                 </div>
                 <div id="field_comment"></div>
             </div>
             <div id="field_navi"></div>
 
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+        <script>
+        // ハイライトを実行
+        hljs.initHighlightingOnLoad();
+        </script>
         <script src="../script/blog_create.js" ></script>
         <script src="../script/pageclip.js"></script>
     </body>        
