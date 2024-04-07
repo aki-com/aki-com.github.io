@@ -1,7 +1,7 @@
 // head.html, shere.html, comment.html, navi.htmlの取得と挿入
 Promise.all([
     fetch("../html_temp/head.html").then(response => response.text()),
-    fetch("/html_temp/shere.html").then(response => response.text()),
+    fetch("../html_temp/shere.html").then(response => response.text()),
     fetch("../html_temp/comment.html").then(response => response.text()),
     fetch("../html_temp/navi.html").then(response => response.text())
 ])
