@@ -79,13 +79,15 @@
                                 <div class="box-topic">
                                     <h3>Public/Privateの意味</h3>
                                     <p>Publicにすると自分がGithubに上げたファイルを"公開"するという意味です。（操作もできる）</p>
-                                    <p>逆にPrivateにすると他人からファイルに干渉することはできません</p>
-                                    <p>無料ユーザーにページ作成機能を提供しているのはPublicのみなので今回はPublicで行います</p>
+                                    <p>逆にPrivateにすると他人からファイルに干渉することはできません。</p>
+                                    <p>無料ユーザーにページ作成機能を提供しているのはPublicのみなので今回はPublicで行います。</p>
                                 </div>
                                 <p>例）↓ユーザー名が「punarist-test」の場合</p>
                                 <img src="../img/github_pages_create.webp" alt="ページ作成の設定確認">
                             </li>
+                            <li>右下の緑の「Create repository」をクリック</li>
                         </ol>
+                        <p>これでネット側の設定は整いました！</p>
                     </div>
                 </div>
 
@@ -95,6 +97,7 @@
                 <div id="sec3" class="text-box">
                     <div class="cross-box">
                         <h2>2. ソフトダウンロード</h2>
+                        <p>次にPC側のセットアップです。</p>
                         <p><a href="https://desktop.github.com/" target="_blank">Github desktopダウンロードページ</a></p>
                         <p><a href="https://code.visualstudio.com/download" target="_blank">VScodeダウンロードページ</a></p>
 
@@ -119,8 +122,25 @@
                                     <p>という利点があり、VScodeを使用します。</p>
                                 </div>
                             </li>
-                            <li>それぞれのsetup.exe がダウンロードされたと思うので開いてアプリケーションをインストールします。</li>
-                            <li>完了したら</li>
+                            <li>それぞれのsetup.exe がダウンロードされたと思うので開いてアプリケーションをインストールします。（mac版は飛ばす）</li>
+                            <li>完了したらGithub Desktopを開いて「Clone a repository」→「Sign in」をクリック
+                                <img src="../img/Github_desktop_login.webp" alt="ログイン画面">
+                            </li>
+                            <li>すると、先ほど作成した「"ユーザー名"/"ユーザー名".githun.io」（←以降リポジトリ名と呼ぶ）という表記があると思うので選択、下のほうにある「Clone "リポジトリ名"」をクリック</li>
+                            <li>
+                                <p>そうすると、</p>
+                                <ul>
+                                    <li>repository</li>
+                                    <li>Local path</li>
+                                </ul>
+                                <p>という項目が出るのでLocal pathだけ変えます。（Chooseで簡単にファイル指定）</p>
+                                <div class="box-topic">
+                                    <h3>Local pathについて</h3>
+                                    <p>PC内で保存する場所を決めます</p>
+                                    <p>具体的な場所ですが、おすすめはDocumentsもしくはドキュメントに「website」というフォルダを作成してその中に保存することをお勧めします。</p>
+                                    <img src="../img/Git_Desk_L_Path.webp" alt="pathの変え方">
+                                </div>
+                            </li>
                         </ol>
                     </div>
 
