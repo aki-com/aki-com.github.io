@@ -93,7 +93,7 @@
                 </div>
                 <div id="sec3" class="text-box">
                     <div class="cross-box">
-                        <h2>2. PCセットアップ</h2>
+                        <h2>3. PCセットアップ</h2>
                         <p>次にPC側のセットアップです。</p>
                         <p><a href="https://desktop.github.com/" target="_blank">Github desktopダウンロードページ</a></p>
                         <p><a href="https://code.visualstudio.com/download" target="_blank">VScodeダウンロードページ</a></p>
@@ -123,7 +123,7 @@
                             <li>完了したらGithub Desktopを開いて「Clone a repository」→「Sign in」をクリック
                                 <img src="../img/Github_desktop_login.webp" alt="ログイン画面">
                             </li>
-                            <li>すると、先ほど作成した「"ユーザー名"/"ユーザー名".githun.io」（←以降リポジトリ名と呼ぶ）という表記があると思うので選択、下のほうにある「Clone "リポジトリ名"」をクリック</li>
+                            <li>すると、先ほど作成した「"ユーザー名"/"ユーザー名".githun.io」（←リポジトリ名と呼ぶ）という表記があると思うので選択、下のほうにある「Clone "リポジトリ名"」をクリック</li>
                             <li>
                                 <p>そうすると、</p>
                                 <ul>
@@ -147,10 +147,13 @@
                 </div>
                 <div id="sec4" class="center text-box">
                     <div class="cross-box">
-                        <h2>3. サイト公開</h2>
+                        <h2>4. サイト公開</h2>
                         <p>最後にサイトを公開します！</p>
                         <ol>
-                            <li>VScodeを開いて「ファイル」→「フォルダを開く」→「Local path」を選択</li>
+                            <li>
+                                <p>VScodeを開いて「フォルダを開く」→Cloneで指定したフォルダの中に「"ユーザー名".github.io"」というフォルダが作成されているのでそれを選択</p>
+                                <p>例）「ドキュメント」→「website」→「"ユーザー名.github.io"」</p>
+                            </li>
                             <li>「index.html」というファイルを作成し、以下のコードを入力</li>
 <pre>
     <code>
@@ -180,7 +183,6 @@
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
         <script>
-        // ハイライトを実行
         hljs.initHighlightingOnLoad();
         </script>
         <script src="../script/blog_create.js" ></script>
