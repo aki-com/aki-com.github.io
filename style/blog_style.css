@@ -62,6 +62,7 @@
         margin: 0; 
         padding: 0;
         color: #ffffff;
+
     }
     .title-box h2 {
         margin: 0; 
@@ -202,3 +203,31 @@
     border-top-color: #4c9ac0;
     z-index: 2; 
     }
+.portfolio-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 8px;
+}
+
+.portfolio-item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 300px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 10px;
+    text-align: center;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.portfolio-item p {
+    margin-top: 8px;
+}
