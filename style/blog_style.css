@@ -124,6 +124,8 @@
         border-top: solid 2px black;    
         border-bottom: solid 2px black;
         text-align: left;
+         overflow: hidden;
+    position: relative;
         
     }
     .cross-box:before, .cross-box:after{
@@ -203,31 +205,28 @@
     border-top-color: #4c9ac0;
     z-index: 2; 
     }
-.portfolio-carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 16px;
-    padding: 8px;
-}
-
+        .portfolio-carousel {
+            display: flex;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            width: 100vw;
+        }
 .portfolio-item {
-    flex: 0 0 auto;
+    flex: 0 0 100vw;
     scroll-snap-align: start;
-    width: 300px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    padding: 10px;
+    box-sizing: border-box;
+    padding: 20px;
     text-align: center;
 }
 
 .portfolio-item img {
-    width: 100%;
+    max-width: 90vw;
     height: auto;
-    border-radius: 6px;
+    border-radius: 10px;
 }
 
 .portfolio-item p {
-    margin-top: 8px;
+    margin-top: 10px;
+    font-size: 1.2em;
 }
