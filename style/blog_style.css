@@ -205,6 +205,7 @@
         border-top-color: #4c9ac0;
         z-index: 2; 
         }
+
 .portfolio-carousel {
     display: flex;
     overflow-x: scroll;
@@ -214,6 +215,8 @@
     /* スクロールバー非表示 */
     scrollbar-width: none;
     -ms-overflow-style: none;
+    /* スクロール速度を制御 */
+    scroll-padding: 0;
 }
 
 .portfolio-carousel::-webkit-scrollbar {
@@ -222,17 +225,21 @@
 
 .portfolio-item {
     flex: 0 0 100%;
-    scroll-snap-align: start;
-    scroll-snap-stop: always; /* 追加：一つずつ確実に止まる */
+    scroll-snap-align: center; /* centerに変更 */
     box-sizing: border-box;
     padding: 20px;
     text-align: center;
+    /* 滑らかな表示 */
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 .portfolio-item img {
-    max-width: 90%;
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
+    /* 画像読み込み時の滑らかさ */
+    transition: opacity 0.2s ease;
 }
 
 .portfolio-item p {

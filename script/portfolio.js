@@ -1,60 +1,96 @@
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.portfolio-carousel').forEach(carousel => {
-    const items = Array.from(carousel.children);
+    const originalItems = Array.from(carousel.children);
+    if (originalItems.length === 0) return;
 
-    // innerHTMLを生成
-    items.forEach(item => {
-      const src = item.dataset.src;
-      const caption = item.dataset.caption;
-      item.innerHTML = `
-        <img src="${src}" alt="">
-        <p>${caption}</p>
-      `;
+    // 元データを保存
+    const itemsData = originalItems.map(item => ({
+      src: item.dataset.src,
+      caption: item.dataset.caption
+    }));
+
+    let currentIndex = 0;
+    let isTransitioning = false;
+    
+    // 5つの要素を常に保持（前2つ、現在、後2つ）
+    function updateCarousel() {
+      carousel.innerHTML = '';
+      
+      for (let i = -2; i <= 2; i++) {
+        const dataIndex = (currentIndex + i + itemsData.length) % itemsData.length;
+        const item = document.createElement('div');
+        item.className = 'portfolio-item';
+        item.innerHTML = `
+          <img src="${itemsData[dataIndex].src}" alt="">
+          <p>${itemsData[dataIndex].caption}</p>
+        `;
+        carousel.appendChild(item);
+      }
+      
+      // 中央（3番目の要素）にスクロール
+      carousel.scrollLeft = carousel.offsetWidth * 2;
+    }
+
+    // 初期設定
+    updateCarousel();
+
+    // スクロール監視
+    let scrollTimeout;
+    carousel.addEventListener('scroll', () => {
+      if (isTransitioning) return;
+      
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        const itemWidth = carousel.offsetWidth;
+        const scrollPos = carousel.scrollLeft;
+        const newIndex = Math.round(scrollPos / itemWidth);
+        
+        if (newIndex !== 2) { // 中央でない場合
+          isTransitioning = true;
+          
+          // インデックス更新
+          currentIndex = (currentIndex + (newIndex - 2) + itemsData.length) % itemsData.length;
+          
+          // 要素を再生成
+          updateCarousel();
+          
+          setTimeout(() => {
+            isTransitioning = false;
+          }, 50);
+        }
+      }, 150); // スクロール完了を待つ
     });
 
-    // 無限ループ処理（クローンの追加）
-    const first = items[0].cloneNode(true);
-    const last = items[items.length - 1].cloneNode(true);
-    carousel.appendChild(first);
-    carousel.insertBefore(last, items[0]);
-
-    const itemWidth = items[0].offsetWidth;
-    setTimeout(() => {
-      carousel.scrollLeft = itemWidth;
-    }, 0);
-
-    const allItems = carousel.querySelectorAll('.portfolio-item');
-    const observerOptions = {
-      root: carousel,
-      threshold: 1.0 // consider the item visible if 60% in view
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        const el = entry.target;
-        const index = Array.from(allItems).indexOf(el);
-
-        // if first element (clone at the beginning) is visible → jump to real last
-        if (index === 0) {
-          carousel.style.scrollSnapType = 'none';
-          carousel.scrollLeft = itemWidth * items.length;
-          requestAnimationFrame(() => {
-            carousel.style.scrollSnapType = 'x mandatory';
-          });
-        }
-
-        // if last element (clone at the end) is visible → jump to real first
-        if (index === allItems.length - 1) {
-          carousel.style.scrollSnapType = 'none';
-          carousel.scrollLeft = itemWidth;
-          requestAnimationFrame(() => {
-            carousel.style.scrollSnapType = 'x mandatory';
-          });
-        }
-      });
-    }, observerOptions);
-
-    allItems.forEach(item => observer.observe(item));
+    // タッチ操作の改善
+    let startX = 0;
+    let startTime = 0;
+    
+    carousel.addEventListener('touchstart', (e) => {
+      if (isTransitioning) return;
+      startX = e.touches[0].clientX;
+      startTime = Date.now();
+    });
+    
+    carousel.addEventListener('touchend', (e) => {
+      if (isTransitioning) return;
+      
+      const endX = e.changedTouches[0].clientX;
+      const endTime = Date.now();
+      const distance = startX - endX;
+      const duration = endTime - startTime;
+      const velocity = Math.abs(distance) / duration;
+      
+      // 速いスワイプでも1つずつ移動するよう制御
+      if (Math.abs(distance) > 50 || velocity > 0.3) {
+        const direction = distance > 0 ? 1 : -1;
+        const itemWidth = carousel.offsetWidth;
+        const targetScroll = carousel.offsetWidth * 2 + (itemWidth * direction);
+        
+        carousel.scrollTo({
+          left: targetScroll,
+          behavior: 'smooth'
+        });
+      }
+    });
   });
 });
