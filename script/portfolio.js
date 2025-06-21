@@ -89,25 +89,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // トラックパッド/マウスホイールイベント
     let wheelTimeout;
     carousel.addEventListener('wheel', (e) => {
-      e.preventDefault();
-      
-      // 連続スクロールを防ぐ
-      if (wheelTimeout) return;
-      wheelTimeout = setTimeout(() => wheelTimeout = null, 300);
-      
       const deltaX = e.deltaX;
       const deltaY = e.deltaY;
       
-      // 横スクロール優先、縦スクロールも横移動として扱う
-      const isLeft = deltaX > 30 || (Math.abs(deltaX) < 10 && deltaY > 30);
-      const isRight = deltaX < -30 || (Math.abs(deltaX) < 10 && deltaY < -30);
-      
-      if (isLeft) {
-        currentIndex = (currentIndex + 1) % items.length;
-        moveToIndex(currentIndex);
-      } else if (isRight) {
-        currentIndex = (currentIndex - 1 + items.length) % items.length;
-        moveToIndex(currentIndex);
+      // 横方向のスクロールが主要な場合のみ処理
+      if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 30) {
+        e.preventDefault();
+        
+        // 連続スクロールを防ぐ
+        if (wheelTimeout) return;
+        wheelTimeout = setTimeout(() => wheelTimeout = null, 300);
+        
+        if (deltaX > 0) {
+          currentIndex = (currentIndex + 1) % items.length;
+          moveToIndex(currentIndex);
+        } else {
+          currentIndex = (currentIndex - 1 + items.length) % items.length;
+          moveToIndex(currentIndex);
+        }
       }
     });
 
