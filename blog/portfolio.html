@@ -9,6 +9,7 @@
             body {
                 background-color: #f0f0f0;
             }
+            
         </style>
         
     </head>
@@ -80,20 +81,10 @@
                         <p></p>
                         <ol style="list-style: none; padding: 0;">
                             <li >アプリ
-                                <div class="portfolio-carousel">
-                                    <div class="portfolio-item">
-                                        <img src="../img/test.png" alt="アプリ1">
-                                        <p>アプリ1</p>
-
-                                    </div>
-                                    <div class="portfolio-item">
-                                        <img src="../img/test.png" alt="アプリ2">
-                                        <p>アプリ2</p>
-                                    </div>
-                                    <div class="portfolio-item">
-                                        <img src="../img/test.png" alt="アプリ3">
-                                        <p>アプリ3</p>
-                                    </div>
+                                <div class="portfolio-carousel" id="carousel">
+                                    <div class="portfolio-item" data-src="../img/test.png" data-caption="作品1"></div>
+                                    <div class="portfolio-item" data-src="../img/test.png" data-caption="作品2"></div>
+                                    <div class="portfolio-item" data-src="../img/test.png" data-caption="作品3"></div>
                                 </div>
 
                                 
@@ -253,7 +244,8 @@
         <script>
         hljs.initHighlightingOnLoad();
         </script>
-
+        <script src="portfolio.js"></script>
         <script defer src="../script/pageclip.js"></script>
+
     </body>        
 </html><!--https://saruwakakun.com/html-css/reference/box>
