@@ -211,23 +211,31 @@
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     width: 100%;
-    transition: transform 0.3s ease;
+    /* スクロールバー非表示 */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
+
+.portfolio-carousel::-webkit-scrollbar {
+    display: none;
+}
+
 .portfolio-item {
     flex: 0 0 100%;
     scroll-snap-align: start;
+    scroll-snap-stop: always; /* 追加：一つずつ確実に止まる */
     box-sizing: border-box;
     padding: 20px;
     text-align: center;
 }
 
-        .portfolio-item img {
-            max-width: 90%;
-            height: auto;
-            border-radius: 10px;
-        }
+.portfolio-item img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+}
 
-        .portfolio-item p {
-            margin-top: 10px;
-            font-size: 1.2em;
-        }
+.portfolio-item p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
