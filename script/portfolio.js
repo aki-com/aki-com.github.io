@@ -27,9 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
     carousel.appendChild(first);
     carousel.insertBefore(last, items[0]);
 
-    // 初期位置を最初の実際のアイテムに設定
-    const itemWidth = carousel.offsetWidth;
-    carousel.scrollLeft = itemWidth;
+    // 初期位置設定を遅延実行
+    setTimeout(() => {
+      const itemWidth = carousel.offsetWidth;
+      if (itemWidth > 0) {
+        carousel.scrollLeft = itemWidth;
+      }
+    }, 50); // 50ms遅延
     
     let currentIndex = 0;
     let isAnimating = false;
@@ -47,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isAnimating) return;
       isAnimating = true;
       
+      const itemWidth = carousel.offsetWidth;
       carousel.scrollTo({
         left: itemWidth * (index + 1),
         behavior: 'smooth'
@@ -165,6 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
     carousel.addEventListener('scroll', () => {
       if (isAnimating) return;
       
+      const itemWidth = carousel.offsetWidth;
       const scrollLeft = carousel.scrollLeft;
       const maxScroll = itemWidth * (items.length + 1);
       
