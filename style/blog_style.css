@@ -264,3 +264,44 @@
     font-size: 1.2em;
     pointer-events: none;
 }
+/* ポートフォリオカルーセルのインジケーター */
+.portfolio-indicators {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 16px;
+  padding: 4px 0;
+}
+
+.portfolio-indicator {
+  width: 20px;
+  height: 4px;
+  background-color: #d1d5db; /* グレー */
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.portfolio-indicator:hover {
+  background-color: #9ca3af; /* ホバー時少し濃く */
+}
+
+.portfolio-indicator.active {
+  width: 32px; /* アクティブ時は少し伸びる */
+  background-color: #374151; /* ダークグレー */
+}
+
+/* ダークモード対応（必要に応じて） */
+@media (prefers-color-scheme: dark) {
+  .portfolio-indicator {
+    background-color: #4b5563;
+  }
+  
+  .portfolio-indicator:hover {
+    background-color: #6b7280;
+  }
+  
+  .portfolio-indicator.active {
+    background-color: #e5e7eb;
+  }
+}

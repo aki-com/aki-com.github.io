@@ -10,6 +10,17 @@ document.addEventListener('DOMContentLoaded', () => {
       item.innerHTML = `<img src="${src}" alt=""><p>${caption}</p>`;
     });
 
+    // インジケーターを作成
+    const indicators = document.createElement('div');
+    indicators.className = 'portfolio-indicators';
+    items.forEach((_, index) => {
+      const indicator = document.createElement('div');
+      indicator.className = 'portfolio-indicator';
+      if (index === 0) indicator.classList.add('active');
+      indicators.appendChild(indicator);
+    });
+    wrapper.insertBefore(indicators, carousel);
+
     // 無限ループ用のクローンを追加
     const first = items[0].cloneNode(true);
     const last = items[items.length - 1].cloneNode(true);
@@ -23,6 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
     let isAnimating = false;
 
+    // インジケーターを更新
+    function updateIndicators(activeIndex) {
+      const indicatorElements = wrapper.querySelectorAll('.portfolio-indicator');
+      indicatorElements.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === activeIndex);
+      });
+    }
+
     // 指定インデックスに移動
     function moveToIndex(index) {
       if (isAnimating) return;
@@ -32,6 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
         left: itemWidth * (index + 1),
         behavior: 'smooth'
       });
+      
+      // インジケーターを更新
+      updateIndicators(index);
       
       setTimeout(() => isAnimating = false, 300);
     }
@@ -86,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // トラックパッド/マウスホイールイベント
+    // トラックパッド/マウスホイールイベント（横方向のみ）
     let wheelTimeout;
     carousel.addEventListener('wheel', (e) => {
       const deltaX = e.deltaX;
@@ -149,11 +171,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (scrollLeft >= maxScroll - 5) {
         carousel.scrollLeft = itemWidth;
         currentIndex = 0;
+        updateIndicators(currentIndex);
       }
       
       if (scrollLeft <= 5) {
         carousel.scrollLeft = itemWidth * items.length;
         currentIndex = items.length - 1;
+        updateIndicators(currentIndex);
       }
     });
   });
