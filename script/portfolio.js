@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.portfolio-carousel').forEach(carousel => {
+    const wrapper = carousel.parentElement;
     const items = Array.from(carousel.children);
     
     // innerHTMLを生成
@@ -33,6 +34,24 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       
       setTimeout(() => isAnimating = false, 300);
+    }
+
+    // ボタンイベント
+    const prevBtn = wrapper.querySelector('.portfolio-btn-prev');
+    const nextBtn = wrapper.querySelector('.portfolio-btn-next');
+    
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        moveToIndex(currentIndex);
+      });
+    }
+    
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % items.length;
+        moveToIndex(currentIndex);
+      });
     }
 
     // タッチイベントでスワイプ方向のみ検出
