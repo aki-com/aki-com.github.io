@@ -3,13 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const wrapper = carousel.parentElement;
     const items = Array.from(carousel.children);
     
-    // innerHTMLを生成
-    items.forEach(item => {
-      const src = item.dataset.src;
-      const caption = item.dataset.caption;
-      item.innerHTML = `<img src="${src}" alt=""><p>${caption}</p>`;
-    });
-
     // インジケーターを作成
     const indicators = document.createElement('div');
     indicators.className = 'portfolio-indicators';
@@ -33,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (itemWidth > 0) {
         carousel.scrollLeft = itemWidth;
       }
-    }, 50); // 50ms遅延
+    }, 50);
     
     let currentIndex = 0;
     let isAnimating = false;
@@ -57,9 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         behavior: 'smooth'
       });
       
-      // インジケーターを更新
       updateIndicators(index);
-      
       setTimeout(() => isAnimating = false, 300);
     }
 
@@ -81,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // タッチイベントでスワイプ方向のみ検出
+    // タッチイベント
     let startX = 0;
     let isDragging = false;
 
@@ -92,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     carousel.addEventListener('touchmove', (e) => {
       if (!isDragging) return;
-      e.preventDefault(); // デフォルトのスクロールを無効化
+      e.preventDefault();
     });
 
     carousel.addEventListener('touchend', (e) => {
@@ -102,28 +93,25 @@ document.addEventListener('DOMContentLoaded', () => {
       const endX = e.changedTouches[0].clientX;
       const diffX = startX - endX;
       
-      // 最小移動距離（30px）以上でページ移動
       if (Math.abs(diffX) > 30) {
-        if (diffX > 0) { // 左スワイプ（次へ）
+        if (diffX > 0) {
           currentIndex = (currentIndex + 1) % items.length;
-        } else { // 右スワイプ（前へ）
+        } else {
           currentIndex = (currentIndex - 1 + items.length) % items.length;
         }
         moveToIndex(currentIndex);
       }
     });
 
-    // トラックパッド/マウスホイールイベント（横方向のみ）
+    // マウスホイールイベント
     let wheelTimeout;
     carousel.addEventListener('wheel', (e) => {
       const deltaX = e.deltaX;
       const deltaY = e.deltaY;
       
-      // 横方向のスクロールが主要な場合のみ処理
       if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 30) {
         e.preventDefault();
         
-        // 連続スクロールを防ぐ
         if (wheelTimeout) return;
         wheelTimeout = setTimeout(() => wheelTimeout = null, 300);
         
@@ -137,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // マウスドラッグイベント（デスクトップ用）
+    // マウスドラッグイベント
     carousel.addEventListener('mousedown', (e) => {
       startX = e.clientX;
       isDragging = true;
