@@ -286,11 +286,12 @@
     object-fit: contain;
 }
 .portfolio-item h3 {
+    margin: 0%;
     text-align: center;
 }
 
 .portfolio-item p {
-    font-size: 1.2em;
+    font-size: 1.1em;
     pointer-events: none;
     margin-left: 5rem;
 }
