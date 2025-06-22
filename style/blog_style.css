@@ -283,6 +283,7 @@
     height: auto;
     border-radius: 10px;
     pointer-events: none;
+    object-fit: contain;
 }
 .portfolio-item h3 {
     text-align: center;
