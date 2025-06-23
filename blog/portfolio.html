@@ -179,13 +179,17 @@
                                 <div class="portfolio-wrapper">
                                     <div class="portfolio-carousel" id="carousel">
                                         <div class="portfolio-item">
+                                            <h3>テトリス</h3>
                                             <img src="../img/test.png" alt="テトリス">
                                             <div class="portfolio-content">
-                                                <h3>テトリス</h3>
-                                                <p>JavaScriptで作成したテトリスゲームです。</p>
+
+                                                <p>C++でDllファイル、C#でGUIを担当したテトリスです</p>
+                                                <p>別プロセスがメモリポインタをたどって簡単に通信できるように作りました。</p>
+                                                <p>C#の中でプレイヤーを生成してるため、同時に何人でもプレイできます</p>
                                                 <ul>
-                                                    <li>使用技術: HTML, CSS, JavaScript</li>
+                                                    <li>使用技術: C++、C#、Dll、Eigen、共有メモリ、行列操作</li>
                                                     <li>制作期間: 2週間</li>
+                                                    <li>GitHub: <a href="https://github.com/aki-com/urris_AI" target="_blank">テトリス</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -214,51 +218,66 @@
 
                 <div id="sec3" class="text-box">
                     <div class="cross-box">
-                        <h2>3. 使っているサービス一覧</h2>
-                        <p>次にPC側のセットアップです。</p>
+                        <h2>3. Skills</h2>
+                        <p><a href="#lang_lib">使用言語・ライブラリ</a>、<a href="#service">使用サービス</a></p>
                         <p></p>
-                        <ol>
-                            <li><p>ダウンロードページにアクセスし、ダウンロードをクリック</p></li>
-                            <p class="center">ダウンロード中にご覧ください↓</p>
-                                <div class="box-topic">
-                                    <h3>Github Desktopとは？</h3>
-                                     <p>本来、githubはコマンドで操作するので初心者が扱えるものじゃないんですがこのアプリを使うとそれが解決します。（githubの使い方を調べると頭がパンクすると思います）</p>
-                                </div>
-                                <div class="box-topic">
-                                    <h3>VScodeとは？</h3>
-                                    <p>このソフト上でコードを書きます。</p>
-                                    <ul>
-                                        <li>ファイル、フォルダを確認しやすい！</li>
-                                        <li>理論上どんなプログラムも動く！</li>
-                                        <li>github copilot(コードを書くAI)が使える！（学生以外有料）</li>
-                                        <li>windowsユーザーもmacユーザーもよく使う！</li>
-                                    </ul>
-                                    <p>という利点があり、VScodeを使用します。</p>
-                                </div>
-                            </li>
-                            <li>それぞれのsetup.exe がダウンロードされたと思うので開いてアプリケーションをインストールします。（mac版は飛ばす）</li>
-                            <li>
-                                <p>完了したらGithub Desktopを開いて「Clone a repository」→「Sign in」をクリックしてログイン</p>
-                                <img src="../img/Github_desktop_login.webp" alt="ログイン画面">
-                            </li>
-                            <li>すると、先ほど作成した「"ユーザー名"/"ユーザー名".githun.io」（←リポジトリ名と呼ぶ）という表記があると思うので選択、下のほうにある「Clone "リポジトリ名"」をクリック</li>
-                            <li>
-                                <p>そうすると、</p>
-                                <ul>
-                                    <li>repository</li>
-                                    <li>Local path</li>
-                                </ul>
-                                <p>という項目が出るのでLocal pathだけ変えます。（Chooseで簡単にファイル指定）</p>
-                                <div class="box-topic">
-                                    <h3>Local pathについて</h3>
-                                    <p>PC内で保存する場所を決めます</p>
-                                    <p>具体的な場所ですが、おすすめはDocumentsもしくはドキュメントに「website」というフォルダを作成してその中に保存することをお勧めします。</p>
-                                    <img src="../img/Git_Desk_L_Path.webp" alt="pathの変え方">
-                                </div>
-                            </li>
-                            <li>「Clone」をクリック</li>
-                        </ol>
-                        <p>これで全ての準備が整いました！残りはhtmlを作成して終わりです！</p>
+                        <div class="box-topic" id="lang_lib">
+                            <h3>使用言語・ライブラリ</h3>
+                            <h4>C/C++・Cライク言語</h4>
+                            <ul>
+                                <li>Eigen（行列計算ライブラリ。回転、抽出、ポインタ操作など）</li>
+                                <li>Windows API（ネイティブなGUI制御、タイマー処理、スレッド操作など）</li>
+                                <li>conio(コンソール入出力ライブラリ。キー入力、画面制御など)</li>
+                                <li>CUDA（GPUプログラミング。カーネル操作、C++のSTLの実装、全探索、ビット操作など）</li>
+                                <li>Arduino(マイコン制御。基本的な入出力、モータ制御など)</li>
+                            </ul>
+                            <h4>Python</h4>
+                            <ul>
+                                <li>NumPy（行列計算ライブラリ。行列演算、データ加工など）</li>
+                                <li>matplotlib（グラフ描画ライブラリ。データの可視化、グラフ作成など）</li>
+                                <li>keras（機械学習ライブラリ。ニューラルネットワークの構築、学習など）</li>
+                                <li>pandas（データ解析ライブラリ。データフレーム操作、データ加工など）</li>
+                                <li>pyO3（RustとPythonの相互運用ライブラリ。Rustで書いたコードをPythonから呼び出すなど）</li>
+                                <li>Nuitka(pythonをC++でコンパイル。アプリ化に使用)</li>
+                                <li>multiprocessing(並列処理。各スレッドの分割処理など)</li>
+                            </ul>
+                            <h4>Rust</h4>
+                            <ul>
+                                <li>Slint（GUIライブラリ。クロスプラットフォームのGUIアプリケーション開発）</li>
+                                <li>zeroconf（avahi、BonjourのRust実装。ネットワークサービスの検出）</li>
+                                <li>rayon（並列処理ライブラリ。データ並列処理、スレッド管理など）</li>
+                                <li>tokio（非同期処理ライブラリ。非同期でのネットワーク通信、入出力処理など）</li>
+                                <li>enigo（Windows、macOSのネイティブAPI。音声管理、キーボード入力など）</li>
+                                <li>pyO3（PythonとRustの相互運用ライブラリ</li>
+                                <li>Simd (複数の数字を１つとして扱う。bit行列の計算で特に有効)</li>
+                                <li>bytemusk(byte列を扱うライブラリ。生のプロセスポインタを安全な型に変換)</li>
+                            </ul>
+                            <h4>C#</h4>
+                            <ul>
+                                <li>Unity Script（ゲームエンジンで使用。当たり判定や物理演算など）</li>
+                                <li>Windows API（GUI制御。タイマー処理、スレッド操作など）</li>
+                                <li>DllImport（動的ライブラリのインポート。C++で書いたDLLをC#から呼び出すなど）</li>
+                            </ul>
+                            <h4>HTML/CSS/JavaScript</h4>
+                            <ul>
+                                <li>HTML（SEOに則った書き方。headタグによるさまざまな設定等）</li>
+                                <li>CSS（文字のスタイル設定、左右に置くなどの配置設定。）</li>
+                                <li>JavaScript（pageclipによるコメント欄の作成、テンプレート化による動的なコンテンツ生成）</li>
+                            </ul>
+                            <h4>その他の言語</h4>
+                            <ul>
+                                <li>R （統計解析。データの可視化、統計的分析など）</li>
+                                <li>SQL（データベース操作。データの取得、更新、削除など）</li>
+                                <li>Ruby（Jekyllを使用した静的サイトジェネレーター）</li>
+                                <li>VBA （ファイル書き込み、GUI操作、シリアル通信、表操作など）</li>
+                                <li>Swift（Rustで作成したランタイム付きの静的ライブラリをiosAppとしてビルド、また、基礎的なGUIデザインを検証）</li>
+                                <li>Go （webサーバーの構築、ゴルーチンによる並列処理、HTTPリクエストの処理など）</li>
+                                
+                            </ul>
+
+                        </div>
+
+
                     </div>
 
 

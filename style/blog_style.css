@@ -295,6 +295,20 @@
     pointer-events: none;
     margin-left: 5rem;
 }
+@media (max-width: 800px) {
+    .portfolio-item p {
+        margin-left: 0;
+        pointer-events: none;
+
+    }
+}
+@media (max-width: 660px) {
+    .portfolio-item p{
+        margin-left: 0;
+        pointer-events: none;
+        text-align: center;
+    }
+}
 .portfolio-item ul {
     padding: 0;
     margin-left: 5rem;
