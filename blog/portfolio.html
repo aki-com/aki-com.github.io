@@ -19,7 +19,7 @@
             <div class="field_main">
                 <div class="center text-box">
                     <div class="title-box">
-                        <h1 class="center" style="font-size: 5em; font-family: 'Hachi Maru Pop', cursive;";>ぽーとふぉりお　ポートフォリオ</h1>
+                        <h1 class="center" style="font-size: 5em; font-family: 'Hachi Maru Pop', cursive;";>ぽーとふぉりお</h1>
                         <h2 class="right" style="font-family: 'Yuji Mai', cursive;">小室 明輝</h2>
                     </div>
                 </div>
@@ -219,61 +219,132 @@
 
                 <div id="sec3" class="text-box">
                     <div class="cross-box">
-                        <h2>3. Skills</h2>
-                        <p><a href="#lang_lib">使用言語・ライブラリ</a>、<a href="#service">使用サービス</a></p>
-                        <p></p>
-                        <div class="box-topic" id="lang_lib">
-                            <h3>使用言語・ライブラリ</h3>
-                            <h4>C/C++・Cライク言語</h4>
-                            <ul>
-                                <li>Eigen（行列計算ライブラリ。回転、抽出、ポインタ操作など）</li>
-                                <li>Windows API（ネイティブなGUI制御、タイマー処理、スレッド操作など）</li>
-                                <li>conio(コンソール入出力ライブラリ。キー入力、画面制御など)</li>
-                                <li>CUDA（GPUプログラミング。カーネル操作、C++のSTLの実装、全探索、ビット操作など）</li>
-                                <li>Arduino(マイコン制御。基本的な入出力、モータ制御など)</li>
-                            </ul>
-                            <h4>Python</h4>
-                            <ul>
-                                <li>NumPy（行列計算ライブラリ。行列演算、データ加工など）</li>
-                                <li>matplotlib（グラフ描画ライブラリ。データの可視化、グラフ作成など）</li>
-                                <li>keras（機械学習ライブラリ。ニューラルネットワークの構築、学習など）</li>
-                                <li>pandas（データ解析ライブラリ。データフレーム操作、データ加工など）</li>
-                                <li>pyO3（RustとPythonの相互運用ライブラリ。Rustで書いたコードをPythonから呼び出すなど）</li>
-                                <li>Nuitka(pythonをC++でコンパイル。アプリ化に使用)</li>
-                                <li>multiprocessing(並列処理。各スレッドの分割処理など)</li>
-                            </ul>
-                            <h4>Rust</h4>
-                            <ul>
-                                <li>Slint（GUIライブラリ。クロスプラットフォームのGUIアプリケーション開発）</li>
-                                <li>zeroconf（avahi、BonjourのRust実装。ネットワークサービスの検出）</li>
-                                <li>rayon（並列処理ライブラリ。データ並列処理、スレッド管理など）</li>
-                                <li>tokio（非同期処理ライブラリ。非同期でのネットワーク通信、入出力処理など）</li>
-                                <li>enigo（Windows、macOSのネイティブAPI。音声管理、キーボード入力など）</li>
-                                <li>pyO3（PythonとRustの相互運用ライブラリ</li>
-                                <li>Simd (複数の数字を1つとして扱う。bit行列の計算で特に有効)</li>
-                                <li>bytemusk(byte列を扱うライブラリ。生のプロセスポインタを安全な型に変換)</li>
-                            </ul>
-                            <h4>C#</h4>
-                            <ul>
-                                <li>Unity Script（ゲームエンジンで使用。当たり判定や物理演算など）</li>
-                                <li>Windows API（GUI制御。タイマー処理、スレッド操作など）</li>
-                                <li>DllImport（動的ライブラリのインポート。C++で書いたDLLをC#から呼び出すなど）</li>
-                            </ul>
-                            <h4>HTML/CSS/JavaScript</h4>
-                            <ul>
-                                <li>HTML（SEOに則った書き方。headタグによるさまざまな設定等）</li>
-                                <li>CSS（文字のスタイル設定、左右に置くなどの配置設定。）</li>
-                                <li>JavaScript（pageclipによるコメント欄の作成、テンプレート化による動的なコンテンツ生成）</li>
-                            </ul>
-                            <h4>その他の言語</h4>
-                            <ul>
-                                <li>R （統計解析。データの可視化、統計的分析など）</li>
-                                <li>SQL（データベース操作。データの取得、更新、削除など）</li>
-                                <li>Ruby（Jekyllを使用した静的サイトジェネレーター）</li>
-                                <li>VBA （ファイル書き込み、GUI操作、シリアル通信、表操作など）</li>
-                                <li>Swift（Rustで作成したランタイム付きの静的ライブラリをiosAppとしてビルド、また、基礎的なGUIデザインを検証）</li>
-                                <li>Go （webサーバーの構築、ゴルーチンによる並列処理、HTTPリクエストの処理など）</li>
-                            </ul>
+                    <h2>3. Skills</h2>
+                    <p class="intro-text"><a href="#lang_lib">使用言語・ライブラリ</a>、<a href="#service">使用サービス</a></p>
+                    
+                    <div class="box-topic" id="lang_lib">
+                        <h3>使用言語・ライブラリ / 使用歴</h3>
+                        
+                        <!-- C/C++ -->
+                        <div class="accordion">
+                            <input type="checkbox" id="cpp-toggle" class="accordion-input">
+                            <label for="cpp-toggle" class="accordion-label">
+                                <h4>C/C++・Cライク言語 <span class="duration-badge">4年間</span></h4>
+                                <span class="accordion-icon">▼</span>
+                            </label>
+                            <div class="accordion-content">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Eigen（行列計算ライブラリ。回転、抽出、ポインタ操作など）</li>
+                                        <li>Windows API（ネイティブなGUI制御、タイマー処理、スレッド操作など）</li>
+                                        <li>conio（コンソール入出力ライブラリ。キー入力、画面制御など）</li>
+                                        <li>CUDA（GPUプログラミング。カーネル操作、C++のSTLの実装、全探索、ビット操作など）</li>
+                                        <li>Arduino（マイコン制御。基本的な入出力、モータ制御など）</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Python -->
+                        <div class="accordion">
+                            <input type="checkbox" id="python-toggle" class="accordion-input">
+                            <label for="python-toggle" class="accordion-label">
+                                <h4>Python <span class="duration-badge">2年間</span></h4>
+                                <span class="accordion-icon">▼</span>
+                            </label>
+                            <div class="accordion-content">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>NumPy（行列計算ライブラリ。行列演算、データ加工など）</li>
+                                        <li>matplotlib（グラフ描画ライブラリ。データの可視化、グラフ作成など）</li>
+                                        <li>keras（機械学習ライブラリ。ニューラルネットワークの構築、学習など）</li>
+                                        <li>pandas（データ解析ライブラリ。データフレーム操作、データ加工など）</li>
+                                        <li>pyO3（RustとPythonの相互運用ライブラリ。Rustで書いたコードをPythonから呼び出すなど）</li>
+                                        <li>Nuitka（pythonをC++でコンパイル。アプリ化に使用）</li>
+                                        <li>multiprocessing（並列処理。各スレッドの分割処理など）</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rust -->
+                        <div class="accordion">
+                            <input type="checkbox" id="rust-toggle" class="accordion-input">
+                            <label for="rust-toggle" class="accordion-label">
+                                <h4>Rust <span class="duration-badge">1.5年間</span></h4>
+                                <span class="accordion-icon">▼</span>
+                            </label>
+                            <div class="accordion-content">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Slint（GUIライブラリ。クロスプラットフォームのGUIアプリケーション開発）</li>
+                                        <li>zeroconf（avahi、BonjourのRust実装。ネットワークサービスの検出）</li>
+                                        <li>rayon（並列処理ライブラリ。データ並列処理、スレッド管理など）</li>
+                                        <li>tokio（非同期処理ライブラリ。非同期でのネットワーク通信、入出力処理など）</li>
+                                        <li>enigo（Windows、macOSのネイティブAPI。音声管理、キーボード入力など）</li>
+                                        <li>pyO3（PythonとRustの相互運用ライブラリ）</li>
+                                        <li>Simd（複数の数字を1つとして扱う。bit行列の計算で特に有効）</li>
+                                        <li>bytemusk（byte列を扱うライブラリ。生のプロセスポインタを安全な型に変換）</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- C# -->
+                        <div class="accordion">
+                            <input type="checkbox" id="csharp-toggle" class="accordion-input">
+                            <label for="csharp-toggle" class="accordion-label">
+                                <h4>C# <span class="duration-badge">1年間</span></h4>
+                                <span class="accordion-icon">▼</span>
+                            </label>
+                            <div class="accordion-content">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Unity Script（ゲームエンジンで使用。当たり判定や物理演算など）</li>
+                                        <li>Windows API（GUI制御。タイマー処理、スレッド操作など）</li>
+                                        <li>DllImport（動的ライブラリのインポート。C++で書いたDLLをC#から呼び出すなど）</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- HTML/CSS/JavaScript -->
+                        <div class="accordion">
+                            <input type="checkbox" id="web-toggle" class="accordion-input">
+                            <label for="web-toggle" class="accordion-label">
+                                <h4>HTML/CSS/JavaScript <span class="duration-badge">1.5年間</span></h4>
+                                <span class="accordion-icon">▼</span>
+                            </label>
+                            <div class="accordion-content">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>HTML（SEOに則った書き方。headタグによるさまざまな設定等）</li>
+                                        <li>CSS（文字のスタイル設定、左右に置くなどの配置設定）</li>
+                                        <li>JavaScript（pageclipによるコメント欄の作成、テンプレート化による動的なコンテンツ生成）</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- その他の言語 -->
+                        <div class="accordion">
+                            <input type="checkbox" id="others-toggle" class="accordion-input">
+                            <label for="others-toggle" class="accordion-label">
+                                <h4>その他の言語 <span class="duration-badge">それぞれ1~2ヶ月ほど</span></h4>
+                                <span class="accordion-icon">▼</span>
+                            </label>
+                            <div class="accordion-content">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>R（統計解析。データの可視化、統計的分析など）</li>
+                                        <li>SQL（データベース操作。データの取得、更新、削除など）</li>
+                                        <li>Ruby（Jekyllを使用した静的サイトジェネレーター）</li>
+                                        <li>VBA（ファイル書き込み、GUI操作、シリアル通信、表操作など）</li>
+                                        <li>Swift（Rustで作成したランタイム付きの静的ライブラリをiosAppとしてビルド、また、基礎的なGUIデザインを検証）</li>
+                                        <li>Go（webサーバーの構築、ゴルーチンによる並列処理、HTTPリクエストの処理など）</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -360,3 +360,83 @@
 .portfolio-content {
     text-align: left;
 }
+
+.accordion {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.accordion-input {
+    display: none;
+}
+
+.accordion-label {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    user-select: none;
+    position: relative;
+}
+
+.accordion-label:hover {
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+.accordion-label h4 {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.accordion-icon {
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+}
+
+/* チェックボックスがチェックされた時のアイコン回転 */
+.accordion-input:checked + .accordion-label .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background: #fafafa;
+}
+
+/* チェックボックスがチェックされた時にコンテンツを表示 */
+.accordion-input:checked + .accordion-label + .accordion-content {
+    max-height: 1000px;
+}
+
+.accordion-body {
+    padding: 20px;
+}
+
+.accordion-body ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.accordion-body li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.duration-badge {
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: 500;
+}
