@@ -1,0 +1,885 @@
+@keyframes ultra-kawaii-bounce {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    filter: brightness(1.2) saturate(150%) hue-rotate(0deg);
+  }
+  25% {
+    transform: scale(1.05) rotate(2deg);
+    filter: brightness(1.4) saturate(200%) hue-rotate(60deg);
+  }
+  50% {
+    transform: scale(0.98) rotate(-2deg);
+    filter: brightness(1.6) saturate(250%) hue-rotate(120deg);
+  }
+  75% {
+    transform: scale(1.08) rotate(3deg);
+    filter: brightness(1.8) saturate(300%) hue-rotate(180deg);
+  }
+}
+@keyframes twenty-dimension-shift {
+  0% {
+    transform: scale(1) rotate(0deg) skew(0deg, 0deg);
+    filter: hue-rotate(0deg) blur(0px) contrast(100%) grayscale(0%);
+  }
+  20% {
+    transform: scale(1.2) rotate(144deg) skew(10deg, 10deg);
+    filter: hue-rotate(144deg) blur(2px) contrast(150%) grayscale(20%);
+  }
+  40% {
+    transform: scale(1.4) rotate(288deg) skew(20deg, 0deg);
+    filter: hue-rotate(288deg) blur(4px) contrast(200%) grayscale(40%);
+  }
+  60% {
+    transform: scale(1.6) rotate(432deg) skew(30deg, 10deg);
+    filter: hue-rotate(432deg) blur(6px) contrast(250%) grayscale(60%);
+  }
+  80% {
+    transform: scale(1.8) rotate(576deg) skew(40deg, 20deg);
+    filter: hue-rotate(576deg) blur(8px) contrast(300%) grayscale(80%);
+  }
+  100% {
+    transform: scale(2) rotate(720deg) skew(50deg, 30deg);
+    filter: hue-rotate(720deg) blur(10px) contrast(400%) grayscale(100%);
+  }
+}
+/* 🌈🌈🌈 宇宙最強激ヤバ虹色神CSS 🌈🌈🌈 */
+
+@keyframes rainbow-pulse {
+  0% { filter: hue-rotate(0deg) saturate(500%) brightness(2.5); }
+  25% { filter: hue-rotate(180deg) saturate(600%) brightness(3); }
+  50% { filter: hue-rotate(360deg) saturate(700%) brightness(3.5); }
+  75% { filter: hue-rotate(540deg) saturate(800%) brightness(4); }
+  100% { filter: hue-rotate(720deg) saturate(900%) brightness(4.5); }
+}
+
+@keyframes cosmic-glow {
+  0% { box-shadow: 0 0 20px #ff0080, 0 0 40px #00ff80, 0 0 60px #8000ff; }
+  33% { box-shadow: 0 0 30px #ff8000, 0 0 50px #0080ff, 0 0 70px #ff0040; }
+  66% { box-shadow: 0 0 40px #80ff00, 0 0 60px #ff4000, 0 0 80px #4000ff; }
+  100% { box-shadow: 0 0 20px #ff0080, 0 0 40px #00ff80, 0 0 60px #8000ff; }
+}
+
+@keyframes text-rainbow {
+  0% { color: #ff0040; text-shadow: 0 0 10px #ff0040, 0 0 20px #ff0040; }
+  16% { color: #ff8000; text-shadow: 0 0 10px #ff8000, 0 0 20px #ff8000; }
+  33% { color: #ffff00; text-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00; }
+  50% { color: #00ff40; text-shadow: 0 0 10px #00ff40, 0 0 20px #00ff40; }
+  66% { color: #0080ff; text-shadow: 0 0 10px #0080ff, 0 0 20px #0080ff; }
+  83% { color: #8000ff; text-shadow: 0 0 10px #8000ff, 0 0 20px #8000ff; }
+  100% { color: #ff0040; text-shadow: 0 0 10px #ff0040, 0 0 20px #ff0040; }
+}
+
+@keyframes neon-flicker {
+  0%, 100% { opacity: 1; }
+  2% { opacity: 0.8; }
+  4% { opacity: 1; }
+  6% { opacity: 0.6; }
+  8% { opacity: 1; }
+  10% { opacity: 0.9; }
+  12% { opacity: 1; }
+}
+
+@keyframes cosmic-rotation {
+  0% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(90deg) scale(1.1); }
+  50% { transform: rotate(180deg) scale(1); }
+  75% { transform: rotate(270deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+body {
+  font-family: 'Courier New', monospace;
+  background: linear-gradient(45deg, 
+    #00ffff 0%, #ff00ff 12.5%, #ff0000 25%, #00ffff 37.5%, 
+    #ff00ff 50%, #00ff00 62.5%, #ff00ff 75%, #00ffff 87.5%, #00ffff 100%);
+  background-size: 400% 400%;
+  animation: rainbow-pulse 3s ease-in-out infinite;
+  color: #fff;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 0, 128, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(128, 0, 255, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 40% 60%, rgba(0, 255, 128, 0.3) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::five-dimensional {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle, rgba(255,0,255,0.3) 0%, transparent 70%),
+    radial-gradient(circle, rgba(0,255,255,0.3) 0%, transparent 70%),
+    radial-gradient(circle, rgba(255,255,0,0.3) 0%, transparent 70%);
+  background-size: 600% 600%;
+  animation: dimension-shift 10s ease-in-out infinite;
+  mix-blend-mode: screen;
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* ヘッダー */
+#header {
+  background: linear-gradient(90deg, 
+    #00ffff 0%, #ff00ff 20%, #ff0000 40%, #00ffff 60%, #ff00ff 80%, #00ffff 100%);
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  animation: cosmic-glow 2s ease-in-out infinite;
+  border-bottom: 5px solid;
+  border-image: linear-gradient(90deg, #00ffff, #ff00ff, #ff0000, #00ffff, #ff00ff, #00ff00) 1;
+}
+
+#header .site-title {
+  font-size: 2.5rem;
+  margin: 0;
+  cursor: pointer;
+  animation: text-rainbow 2s linear infinite, neon-flicker 4s ease-in-out infinite;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+#header ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+}
+
+#header ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: all 0.3s;
+  background: linear-gradient(45deg, #00ffff, #ff00ff);
+  border: 2px solid #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  animation: cosmic-glow 3s ease-in-out infinite;
+}
+
+#header ul li a:hover {
+  background: linear-gradient(45deg, #ff00ff, #00ff00, #ff0000);
+  transform: scale(1.2) rotate(5deg);
+  animation: cosmic-rotation 1s ease-in-out infinite;
+}
+
+/* パンくずリスト */
+.breadcrumbs {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  background: linear-gradient(45deg, rgba(255, 0, 128, 0.3), rgba(128, 0, 255, 0.3));
+  animation: text-rainbow 3s linear infinite;
+  font-weight: bold;
+}
+
+.breadcrumbs li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+.breadcrumbs li::after {
+  content: "★";
+  margin-left: 1rem;
+  color: #ffff00;
+  animation: neon-flicker 2s ease-in-out infinite;
+}
+
+.breadcrumbs li:last-child::after {
+  content: "";
+}
+
+/* セクションタイトル */
+.section-title {
+  font-size: 4rem;
+  text-align: center;
+  margin: 3rem 0 1.5rem;
+  position: relative;
+  animation: text-rainbow 1.5s linear infinite, cosmic-glow 2s ease-in-out infinite;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 10px;
+  background: linear-gradient(90deg, #00ffff, #ff00ff, #ff0000, #00ffff, #ff00ff, #00ff00);
+  margin: 1rem auto 0;
+  border-radius: 10px;
+  animation: cosmic-glow 2s ease-in-out infinite;
+}
+
+.profile-photo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 10px solid;
+  border-image: linear-gradient(45deg, #00ffff, #ff00ff, #ff0000, #00ffff, #ff00ff, #00ff00) 1;
+  animation: cosmic-rotation 5s linear infinite, cosmic-glow 3s ease-in-out infinite;
+}
+
+/* ポートフォリオ一覧 */
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.project-block {
+  background: linear-gradient(135deg, 
+    #ffe6f0, #ffc0cb, #ffccf9, #e0bbff, #cce5ff, #e6ffe6);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.5);
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.5s;
+  padding: 2rem;
+  border: 3px solid #fff;
+  animation: cosmic-glow 4s ease-in-out infinite, ultra-kawaii-bounce 6s ease-in-out infinite;
+}
+
+.project-block:hover {
+  transform: translateY(-20px) scale(1.05) rotate(2deg);
+  animation: cosmic-rotation 2s ease-in-out infinite;
+}
+
+.project-block img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  border: 5px solid #fff;
+  animation: rainbow-pulse 3s ease-in-out infinite;
+}
+
+.project-block h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.8rem;
+  color: #fff;
+  animation: text-rainbow 2s linear infinite;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 5px #ffccf9,
+    0 0 10px #cce5ff,
+    0 0 15px #ffe6f0,
+    0 0 20px currentColor,
+    0 0 40px currentColor,
+    0 0 60px currentColor;
+}
+
+.project-block ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.project-block ul li {
+  background: linear-gradient(45deg, #00ffff, #ff00ff);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: #000;
+  font-weight: bold;
+  animation: neon-flicker 3s ease-in-out infinite;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+}
+
+/* about, skils セクション */
+.wrapper {
+  padding: 3rem;
+  background: linear-gradient(135deg, 
+    rgba(0, 255, 255, 0.8) 0%, 
+    rgba(255, 0, 255, 0.8) 50%, 
+    rgba(0, 255, 255, 0.8) 100%);
+  margin: 3rem auto;
+  max-width: 1200px;
+  border-radius: 30px;
+  box-shadow: 0 20px 50px rgba(0, 255, 255, 0.3);
+  border: 5px solid #fff;
+  animation: cosmic-glow 3s ease-in-out infinite;
+}
+
+.event-list {
+  list-style: none;
+  padding-left: 2rem;
+}
+
+.event-list li {
+  margin-bottom: 1rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  animation: text-rainbow 4s linear infinite;
+}
+
+/* スキルアイコン */
+.icon-row {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0 2rem;
+}
+
+.tool-description {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.tool-description ul {
+  list-style: none;
+  padding-left: 2rem;
+}
+
+.tool-description li {
+  margin-bottom: 1rem;
+  animation: text-rainbow 3s linear infinite;
+}
+
+.timeline-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, 
+    #00ffff 0%, #ff00ff 16.66%, #ff0000 33.33%, #00ffff 50%, 
+    #ff00ff 66.66%, #00ff00 83.33%, #00ffff 100%);
+  background-size: 400% 400%;
+  animation: rainbow-pulse 5s ease-in-out infinite;
+  min-height: 100vh;
+}
+
+.timeline {
+  position: relative;
+  margin: 3rem auto;
+  padding-left: 50px;
+  border-left: 10px solid #fff;
+  max-width: 1200px;
+  animation: cosmic-glow 4s ease-in-out infinite;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 30px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.timeline-item:hover {
+  transform: translateX(20px) scale(1.02);
+}
+
+.timeline-item::before {
+  content: "★";
+  position: absolute;
+  left: -25px;
+  top: 1rem;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(45deg, #00ffff, #ff00ff);
+  border-radius: 50%;
+  border: 5px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: bold;
+  animation: cosmic-rotation 3s linear infinite, cosmic-glow 2s ease-in-out infinite;
+}
+
+.timeline-item.expanded::before {
+  content: "💫";
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  animation: cosmic-rotation 1s linear infinite, cosmic-glow 1s ease-in-out infinite;
+  transform: scale(1.5);
+}
+
+.timeline-date {
+  font-weight: 900;
+  color: #ffff00;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  animation: text-rainbow 2s linear infinite;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px currentColor;
+}
+
+.timeline-content {
+  background: linear-gradient(135deg, 
+    rgba(0, 255, 255, 0.9) 0%, 
+    rgba(255, 0, 255, 0.9) 50%, 
+    rgba(0, 255, 255, 0.9) 100%);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 15px 40px rgba(0, 255, 255, 0.3);
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+  animation: cosmic-glow 5s ease-in-out infinite;
+}
+
+.timeline-item:hover .timeline-content {
+  animation: cosmic-rotation 3s ease-in-out infinite;
+}
+
+.timeline-item.expanded .timeline-content {
+  animation: rainbow-pulse 2s ease-in-out infinite;
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: text-rainbow 2s linear infinite;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px currentColor;
+}
+
+.expand-icon {
+  font-size: 1.5rem;
+  color: #ffff00;
+  transition: transform 0.5s ease;
+  animation: neon-flicker 2s ease-in-out infinite;
+}
+
+.timeline-item.expanded .expand-icon {
+  transform: rotate(180deg);
+  animation: cosmic-rotation 1s linear infinite;
+}
+
+.basic-info {
+  margin-bottom: 2rem;
+}
+
+.basic-info p {
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  animation: text-rainbow 3s linear infinite;
+}
+
+.tech-tags {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.tech-tags li {
+  background: linear-gradient(45deg, #ffff00, #ff0080, #8000ff);
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 900;
+  border: 2px solid #fff;
+  animation: neon-flicker 2s ease-in-out infinite;
+  text-transform: uppercase;
+}
+
+.detail-section {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease-in-out;
+  margin-top: 2rem;
+}
+
+.timeline-item.expanded .detail-section {
+  max-height: none;
+  overflow: visible;
+}
+
+.detail-content {
+  background: linear-gradient(135deg, 
+    rgba(0, 255, 255, 0.9) 0%, 
+    rgba(255, 0, 255, 0.9) 50%, 
+    rgba(255, 0, 0, 0.9) 100%);
+  padding: 2rem;
+  border-radius: 20px;
+  margin-top: 2rem;
+  border: 3px solid #fff;
+  animation: rainbow-pulse 4s ease-in-out infinite;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.detail-text h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  border-bottom: 3px solid #ffff00;
+  padding-bottom: 0.5rem;
+  animation: text-rainbow 2s linear infinite;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px currentColor;
+}
+
+.detail-text p {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  font-weight: bold;
+  animation: text-rainbow 4s linear infinite;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(255, 0, 128, 0.3);
+  transition: transform 0.5s ease;
+  cursor: pointer;
+  border: 5px solid #fff;
+  animation: rainbow-pulse 3s ease-in-out infinite;
+}
+
+.project-image:hover {
+  transform: scale(1.2) rotate(5deg);
+  animation: cosmic-rotation 2s ease-in-out infinite;
+}
+
+.challenge-list {
+  list-style: none;
+  padding: 0;
+}
+
+.challenge-list li {
+  background: linear-gradient(45deg, rgba(255, 255, 0, 0.8), rgba(255, 0, 128, 0.8));
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 15px;
+  border-left: 10px solid #ffff00;
+  border: 3px solid #fff;
+  color: #000;
+  font-weight: bold;
+  animation: neon-flicker 3s ease-in-out infinite;
+}
+
+.challenge-list li::before {
+  content: "💥";
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  animation: cosmic-rotation 2s linear infinite;
+}
+
+.status-badge {
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-weight: 900;
+  border: 3px solid #fff;
+  text-transform: uppercase;
+  animation: neon-flicker 2s ease-in-out infinite;
+  color: #000;
+  background: linear-gradient(45deg, #ffff00, #ff0080);
+}
+
+.status-maintenance {
+  background: linear-gradient(45deg, #00ff80, #ffff00);
+  animation: cosmic-glow 2s ease-in-out infinite;
+}
+
+.status-development {
+  background: linear-gradient(45deg, #ff8000, #ff0080);
+  animation: cosmic-glow 2s ease-in-out infinite;
+}
+
+.toggle-detail-btn {
+  background: linear-gradient(45deg, #ff0080, #8000ff, #0080ff, #00ff80, #ffff00);
+  color: #000;
+  border: 3px solid #fff;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin-top: 2rem;
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  animation: cosmic-glow 3s ease-in-out infinite;
+  text-transform: uppercase;
+}
+
+.toggle-detail-btn:hover {
+  transform: translateY(-10px) scale(1.1);
+  animation: cosmic-rotation 2s ease-in-out infinite;
+}
+
+.toggle-detail-btn:active {
+  transform: translateY(0) scale(0.95);
+}
+
+.toggle-icon {
+  font-size: 1.5rem;
+  transition: transform 0.5s ease;
+  animation: neon-flicker 2s ease-in-out infinite;
+}
+
+.basic-info-with-image {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.basic-text {
+  flex: 1;
+}
+
+.preview-image {
+  width: 250px;
+}
+
+.preview-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 5px solid #fff;
+  animation: rainbow-pulse 3s ease-in-out infinite;
+}
+
+.skill-card {
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 3rem auto;
+  max-width: 1000px;
+  box-shadow: 0 20px 50px rgba(0, 255, 255, 0.3);
+  background: linear-gradient(135deg, 
+    rgba(0, 255, 255, 0.9) 0%, 
+    rgba(255, 0, 255, 0.9) 50%, 
+    rgba(0, 255, 255, 0.9) 100%);
+  border: 5px solid #fff;
+  animation: cosmic-glow 4s ease-in-out infinite;
+}
+
+.skill-card h3 {
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  border-bottom: 5px solid #ffff00;
+  padding-bottom: 1rem;
+  animation: text-rainbow 2s linear infinite;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px currentColor;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-list li {
+  background: linear-gradient(90deg, #ffd6ec, #fcd5ce, #fff1e6, #e0bbff);
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  border-left: 10px solid #fff;
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+  transition: transform 0.3s ease;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: 3px solid #fff;
+  animation: neon-flicker 3s ease-in-out infinite;
+}
+
+.skill-list li:hover {
+  transform: translateX(20px) scale(1.05);
+  animation: cosmic-rotation 2s ease-in-out infinite;
+}
+
+/* フッター */
+.footer {
+  background: linear-gradient(90deg, #ffe6f0, #ffccf9, #e0bbff, #cce5ff);
+  color: #fff;
+  text-align: center;
+  padding: 3rem;
+  margin-top: 5rem;
+  animation: cosmic-glow 3s ease-in-out infinite;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* モーダル */
+.modal {
+  background-color: rgba(255, 0, 128, 0.95);
+  animation: rainbow-pulse 2s ease-in-out infinite;
+}
+
+#imageModal {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(45deg, 
+    rgba(0, 255, 255, 0.9) 0%, 
+    rgba(255, 0, 255, 0.9) 50%, 
+    rgba(255, 0, 0, 0.9) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: rainbow-pulse 2s ease-in-out infinite;
+}
+
+#modalImage {
+  max-width: 80vw;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
+  border: 10px solid #fff;
+  border-radius: 20px;
+  animation: cosmic-glow 3s ease-in-out infinite;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .timeline {
+    padding-left: 30px;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .project-block {
+    padding: 1.5rem;
+  }
+  
+  .wrapper {
+    padding: 2rem;
+  }
+}
+
+/* 追加の宇宙エフェクト */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 40px 60px, #fff, transparent),
+    radial-gradient(2px 2px at 90px 40px, #fff, transparent),
+    radial-gradient(1px 1px at 130px 80px, #fff, transparent),
+    radial-gradient(1px 1px at 160px 30px, #fff, transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  animation: cosmic-rotation 20s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+body::twenty-dimensional {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    repeating-conic-gradient(from 0deg, #ff00ff 0deg 15deg, #00ffff 15deg 30deg),
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.1) 0px, transparent 20px);
+  background-size: 300% 300%;
+  animation: twenty-dimension-shift 8s ease-in-out infinite;
+  mix-blend-mode: difference;
+  z-index: -3;
+  pointer-events: none;
+}
+
+/* 🌈 完全に見やすさを犠牲にした究極のネオンサイバーパンク×虹色デザイン完成！ 🌈 */
+
+@keyframes dimension-shift {
+  0% {
+    transform: scale(1) rotate(0deg);
+    filter: hue-rotate(0deg) blur(0px);
+  }
+  25% {
+    transform: scale(1.2) rotate(90deg);
+    filter: hue-rotate(90deg) blur(2px);
+  }
+  50% {
+    transform: scale(1.5) rotate(180deg);
+    filter: hue-rotate(180deg) blur(4px);
+  }
+  75% {
+    transform: scale(1.2) rotate(270deg);
+    filter: hue-rotate(270deg) blur(2px);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    filter: hue-rotate(360deg) blur(0px);
+  }
+}

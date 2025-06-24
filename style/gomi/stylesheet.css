@@ -1,0 +1,716 @@
+body {
+  font-family: 'Segoe UI', 'Hiragino Kaku Gothic ProN', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* ヘッダー */
+#header {
+  background: #1e1e2f;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#header .site-title {
+  font-size: 1.8rem;
+  margin: 0;
+  cursor: pointer;
+}
+
+#header ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+}
+
+
+
+#header ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+#header ul li a:hover {
+  background: #444;
+}
+
+/* パンくずリスト */
+.breadcrumbs {
+  padding: 0.5rem 2rem;
+  font-size: 0.9rem;
+}
+
+.breadcrumbs li {
+  display: inline;
+  margin-right: 0.5rem;
+}
+
+.breadcrumbs li::after {
+  content: ">";
+  margin-left: 0.5rem;
+}
+
+.breadcrumbs li:last-child::after {
+  content: "";
+}
+
+
+
+/* セクションタイトル */
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin: 3rem 0 1.5rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #1e1e2f;
+  margin: 0.5rem auto 0;
+}
+
+
+.profile-photo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e8eaf6;
+}
+
+
+/* ポートフォリオ一覧 */
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 1rem 2rem;
+}
+
+.project-block {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 1rem;
+}
+
+.project-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.project-block img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.project-block h3 {
+  margin: 0.8rem 0 0.4rem;
+  font-size: 1.2rem;
+  color: #1e1e2f;
+}
+
+.project-block ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.project-block ul li {
+  background: #eef;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+}
+
+/* about, skils セクション */
+.wrapper {
+  padding: 2rem;
+  background-color: #fff;
+  margin: 2rem auto;
+  max-width: 1000px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.event-list {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.event-list li {
+  margin-bottom: 0.6rem;
+}
+
+/* スキルアイコン */
+.icon-row {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 1rem;
+}
+
+.tool-description {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 0.95rem;
+}
+
+.tool-description ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.tool-description li {
+  margin-bottom: 0.5rem;
+}
+
+
+
+    .timeline-section {
+      padding: 3rem 1rem;
+      background: linear-gradient(135deg, #f8f6ff 0%, #e8eaf6 100%);
+      min-height: 100vh;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #4527a0;
+      margin-bottom: 3rem;
+      font-weight: 700;
+    }
+
+    .timeline {
+      position: relative;
+      margin: 2rem auto;
+      padding-left: 30px;
+      border-left: 4px solid #7e57c2;
+      max-width: 900px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2rem;
+      padding-left: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .timeline-item:hover {
+      transform: translateX(5px);
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -11px;
+      top: 0.5rem;
+      width: 12px;
+      height: 12px;
+      background-color: #7e57c2;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 2px #7e57c2;
+      transition: all 0.3s ease;
+    }
+
+    .timeline-item.expanded::before {
+      background-color: #ff6b35;
+      box-shadow: 0 0 0 2px #ff6b35;
+      transform: scale(1.3);
+    }
+
+    .timeline-date {
+      font-weight: bold;
+      color: #5e35b1;
+      margin-bottom: 0.3rem;
+      font-size: 0.9rem;
+    }
+
+    .timeline-content {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .timeline-item:hover .timeline-content {
+      box-shadow: 0 8px 25px rgba(126, 87, 194, 0.15);
+    }
+
+    .timeline-item.expanded .timeline-content {
+      box-shadow: 0 12px 30px rgba(126, 87, 194, 0.2);
+    }
+
+    .timeline-content h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+      color: #512da8;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .expand-icon {
+      font-size: 1rem;
+      color: #7e57c2;
+      transition: transform 0.3s ease;
+    }
+
+    .timeline-item.expanded .expand-icon {
+      transform: rotate(90deg);
+    }
+
+    .basic-info {
+      margin-bottom: 1rem;
+    }
+
+    .basic-info p {
+      margin-bottom: 0.3rem;
+      color: #666;
+    }
+
+    .tech-tags {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+
+    .tech-tags li {
+      background: linear-gradient(135deg, #ede7f6, #e1bee7);
+      color: #4527a0;
+      padding: 0.3rem 0.7rem;
+      border-radius: 15px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .detail-section {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out;
+      margin-top: 1rem;
+    }
+
+.timeline-item.expanded .detail-section {
+  max-height: none;     /* 制限なし */
+  overflow: visible;    /* 内容を完全表示 */
+}
+
+    .detail-content {
+      background: linear-gradient(135deg, #f3e5f5 0%, #fce4ec 100%);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-top: 1rem;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .detail-text h4 {
+      color: #4a148c;
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+      border-bottom: 2px solid #ba68c8;
+      padding-bottom: 0.2rem;
+    }
+
+    .detail-text p {
+      color: #4a148c;
+      font-size: 0.95rem;
+      margin-bottom: 0.8rem;
+      line-height: 1.7;
+    }
+
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .project-image {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .project-image:hover {
+      transform: scale(1.05);
+    }
+
+    .challenge-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .challenge-list li {
+      background-color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 0.5rem;
+      padding: 0.8rem;
+      border-radius: 8px;
+      border-left: 4px solid #ba68c8;
+    }
+
+    .challenge-list li::before {
+      content: "💡";
+      margin-right: 0.5rem;
+    }
+
+
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 2px solid;
+    /* デフォルト（保守中）スタイル（緑） */
+    color: #16a34a;
+    background-color: #f0fdf4;
+    border-color: #16a34a;
+}
+
+/* 保守中スタイル（緑） */
+.status-maintenance {
+    color: #16a34a;
+    background-color: #f0fdf4;
+    border-color: #16a34a;
+}
+
+/* 制作中スタイル（オレンジ） */
+.status-development {
+    color: #ea580c;
+    background-color: #fff7ed;
+    border-color: #ea580c;
+}
+
+
+/* 改善された詳細切り替えボタン */
+.toggle-detail-btn {
+    background: linear-gradient(135deg, #7e57c2, #9c27b0);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 3px 10px rgba(126, 87, 194, 0.3);
+}
+
+.toggle-detail-btn:hover {
+transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(126, 87, 194, 0.4);
+}
+
+.toggle-detail-btn:active {
+    transform: translateY(0);
+}
+
+.toggle-icon {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+
+    
+    .basic-info-with-image {
+  display: flex;               /* 横並び配置 */
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.basic-text {
+  flex: 1;                     /* テキスト部分は可変幅 */
+}
+
+.preview-image {
+  width: 200px;                /* 画像は固定幅200px */
+}
+
+.preview-img {
+  width: 100%;
+  height: 120px;               /* 高さ120px固定 */
+  object-fit: cover;           /* 画像を枠に合わせてトリミング */
+  border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+    @media (max-width: 768px) {
+      .detail-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      
+      .timeline {
+        padding-left: 20px;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+    }
+
+    /* モーダル用のスタイル */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* モーダルの中身 */
+.modal-content {
+  position: relative;
+  margin: 5% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 0vw;
+  max-height: 90vh;
+}
+
+    .modal img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .close {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      color: white;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+
+
+
+
+
+
+
+.skill-card {
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(135deg, #ede7f6 0%, #fce4ec 100%);
+}
+
+.skill-card h3 {
+  color: #5e35b1;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #b39ddb;
+  padding-bottom: 0.5rem;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-list li {
+  background-color: #fff;
+  margin-bottom: 0.7rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border-left: 5px solid #7e57c2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.skill-list li:hover {
+  transform: translateX(4px);
+}
+
+
+
+
+/* フッター */
+.footer {
+  background: #1e1e2f;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+
+
+
+
+
+
+
+
+body {
+  font-family: 'Segoe UI', 'Hiragino Kaku Gothic ProN', sans-serif;
+  background-color: #f4f0fb;  /* 柔らかい紫系背景に */
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f8f6ff 0%, #e8eaf6 100%);
+}
+
+/* ヘッダー */
+#header {
+  background:linear-gradient(135deg, #926be0 0%, #5e35b1 100%) ;   /* 鮮やかすぎない紫に統一 */
+  color: #fff;
+}
+
+/* リンク hover */
+#header ul li a:hover {
+  background: #7e57c2;
+}
+
+/* セクションタイトル */
+.section-title::after {
+  background: #7e57c2;
+}
+
+/* project-block タイトル */
+.project-block h3 {
+  color: #5e35b1;
+}
+
+/* project-block タグ */
+.project-block ul li {
+  background: #ede7f6;
+  color: #5e35b1;
+}
+
+/* スキルカード */
+.skill-card {
+  background-color: #f3e5f5;
+  box-shadow: 0 4px 12px rgba(126, 87, 194, 0.1);
+}
+
+.skill-list li {
+  border-left: 5px solid #7e57c2;
+}
+
+/* タイムライン点 */
+.timeline-item::before {
+  background-color: #7e57c2;
+}
+
+/* 拡張時 */
+.timeline-item.expanded::before {
+  background-color: #ff6b35;
+}
+
+/* 詳細背景 */
+.detail-content {
+  background: linear-gradient(135deg, #ede7f6 0%, #fce4ec 100%);
+}
+
+/* タグカラー */
+.tech-tags li {
+  background: #ede7f6;
+  color: #5e35b1;
+}
+
+/* モーダル背景 */
+.modal {
+  background-color: rgba(94, 53, 177, 0.85);
+}
+
+/* フッター */
+.footer {
+  background: linear-gradient(135deg, #926be0 0%, #5e35b1 100%);
+}
+
+
+
+
+
+#imageModal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+
+
+/* 拡大画像 */
+#modalImage {
+  max-width: 80vw;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
